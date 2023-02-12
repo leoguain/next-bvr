@@ -31,7 +31,7 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
                   bg={"rgba(18, 18, 18, 0.7)"}
                   px={2}
                   color="#fff"
-                  fontSize={"xl"}
+                  fontSize={["md", "md", "md", "xl"]}
                 >
                   {track}
                 </Text>

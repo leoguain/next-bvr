@@ -7,9 +7,6 @@ import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
-import { PageConstructor } from "components/PageConstructor";
-
-import { Box } from "@chakra-ui/react";
 import { DocumentsList } from "@/components/DocumentsList";
 
 function Documentos({
@@ -28,25 +25,10 @@ function Documentos({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Box
-          mx="auto"
-          backgroundImage={"/bkg/bkg_02.jpg"}
-          backgroundSize="cover"
-          backgroundPosition={"center"}
-          backgroundRepeat={[
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "no-repeat",
-          ]}
-          height={"100%"}
-        >
-          <Content>
-            <PageTitle pageTitle={title} pageUrl={asPath} />
-            <DocumentsList documents={documentos} />
-          </Content>
-        </Box>
+        <Content>
+          <PageTitle pageTitle={title} pageUrl={asPath} />
+          <DocumentsList documents={documentos} />
+        </Content>
       </Page>
     </React.Fragment>
   );

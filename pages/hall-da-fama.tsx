@@ -8,7 +8,6 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
 
-import { Box } from "@chakra-ui/react";
 import { ChampionsList } from "@/components/ChampionsList";
 
 function Documentos({
@@ -27,25 +26,10 @@ function Documentos({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Box
-          mx="auto"
-          backgroundImage={"/bkg/bkg_02.jpg"}
-          backgroundSize="cover"
-          backgroundPosition={"center"}
-          backgroundRepeat={[
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "no-repeat",
-          ]}
-          height={"100%"}
-        >
-          <Content>
-            <PageTitle pageTitle={title} pageUrl={asPath} />
-            <ChampionsList champions={champions} />
-          </Content>
-        </Box>
+        <Content>
+          <PageTitle pageTitle={title} pageUrl={asPath} />
+          <ChampionsList champions={champions} />
+        </Content>
       </Page>
     </React.Fragment>
   );

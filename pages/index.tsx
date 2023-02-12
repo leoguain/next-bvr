@@ -7,8 +7,6 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageConstructor } from "components/PageConstructor";
 
-import { Box } from "@chakra-ui/react";
-
 function Home({
   pageTitle,
   description,
@@ -22,24 +20,9 @@ function Home({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Box
-          mx="auto"
-          backgroundImage={"/bkg/bkg_02.jpg"}
-          backgroundSize="cover"
-          backgroundPosition={"center"}
-          backgroundRepeat={[
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "no-repeat",
-          ]}
-          height={"100%"}
-        >
-          <Content>
-            <PageConstructor text={texts} />
-          </Content>
-        </Box>
+        <Content>
+          <PageConstructor text={texts} />
+        </Content>
       </Page>
     </React.Fragment>
   );

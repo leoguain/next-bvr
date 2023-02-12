@@ -7,9 +7,7 @@ import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
-import { PageConstructor } from "components/PageConstructor";
 
-import { Box } from "@chakra-ui/react";
 import { ChampionshipResults } from "@/components/ChampionshipsResults";
 
 function Campeonatos({
@@ -28,31 +26,14 @@ function Campeonatos({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Box
-          mx="auto"
-          backgroundImage={"/bkg/bkg_02.jpg"}
-          backgroundSize="cover"
-          backgroundPosition={"center"}
-          backgroundRepeat={[
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "no-repeat",
-          ]}
-          height={"100%"}
-        >
-          <Content>
-            <PageTitle pageTitle={title} pageUrl={asPath} />
-            <ChampionshipResults />
-          </Content>
-        </Box>
+        <Content>
+          <PageTitle pageTitle={title} pageUrl={asPath} />
+          <ChampionshipResults />
+        </Content>
       </Page>
     </React.Fragment>
   );
 }
-
-//<PageConstructor text={texts} />
 
 export const getStaticProps: GetStaticProps = async () => {
   const pageTitle = "Campeonatos - Brasil Virtual Racing";

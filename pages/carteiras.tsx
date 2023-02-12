@@ -8,7 +8,6 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
-import { Box } from "@chakra-ui/react";
 import { LicensesList } from "@/components/LicensesList";
 
 function Carteiras({
@@ -27,25 +26,10 @@ function Carteiras({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Box
-          mx="auto"
-          backgroundImage={"/bkg/bkg_02.jpg"}
-          backgroundSize="cover"
-          backgroundPosition={"center"}
-          backgroundRepeat={[
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "repeat-y",
-            "no-repeat",
-          ]}
-          height={"100%"}
-        >
-          <Content>
-            <PageTitle pageTitle={title} pageUrl={asPath} />
-            <LicensesList licenses={licenses} />
-          </Content>
-        </Box>
+        <Content>
+          <PageTitle pageTitle={title} pageUrl={asPath} />
+          <LicensesList licenses={licenses} />
+        </Content>
       </Page>
     </React.Fragment>
   );

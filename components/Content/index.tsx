@@ -11,6 +11,10 @@ export const Content = ({ children, ...rest }: FlexProps) => {
       px={4}
       direction="column"
       {...rest}
+      backgroundImage={"/bkg/bkg_02.jpg"}
+      backgroundAttachment="fixed"
+      backgroundSize="cover"
+      backgroundPosition={"center"}
     >
       <React.Fragment>
         <ToTopButton />
