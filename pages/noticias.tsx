@@ -10,6 +10,7 @@ import { PageTitle } from "components/PageTitle";
 import { PageConstructor } from "components/PageConstructor";
 
 import { Box } from "@chakra-ui/react";
+import { News } from "@/components/News";
 
 function Noticias({
   pageTitle,
@@ -29,13 +30,21 @@ function Noticias({
       <Page title={pageTitle} description={description}>
         <Box
           mx="auto"
-          backgroundImage={"/bkg/bkg_01.jpg"}
+          backgroundImage={"/bkg/bkg_02.jpg"}
           backgroundSize="cover"
           backgroundPosition={"center"}
+          backgroundRepeat={[
+            "repeat-y",
+            "repeat-y",
+            "repeat-y",
+            "repeat-y",
+            "no-repeat",
+          ]}
+          height={"100%"}
         >
           <Content>
             <PageTitle pageTitle={title} pageUrl={asPath} />
-            <PageConstructor text={texts} />
+            <News type="Page" />
           </Content>
         </Box>
       </Page>

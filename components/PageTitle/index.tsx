@@ -1,15 +1,14 @@
 import React from "react";
-import { Breadcrumb } from "components/Breadcrumb";
 import { Flex, Text } from "@chakra-ui/react";
 import { TitleProps } from "./types";
 
 export const PageTitle = ({ pageTitle, pageUrl }: TitleProps) => {
   return (
     <Flex
-      borderBottom="2px solid"
-      borderColor="gray.200"
+      bg={"rgba(18, 18, 18, 0.7)"}
       justifyContent={["center", "center", "space-between"]}
       flexDirection={["column-reverse", "column-reverse", "row"]}
+      px={4}
     >
       <Text
         align={"center"}
@@ -19,7 +18,6 @@ export const PageTitle = ({ pageTitle, pageUrl }: TitleProps) => {
       >
         {pageTitle}
       </Text>
-      <Breadcrumb url={pageUrl} title={pageTitle} />
     </Flex>
   );
 };

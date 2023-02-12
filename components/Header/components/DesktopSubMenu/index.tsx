@@ -30,7 +30,10 @@ export const DesktopSubMenu = ({ id, href, subItems }: MenuItemProps) => {
         href={href}
         outline="secondary.500"
         color={asPath.includes(id) ? "primary.500" : "secondary.500"}
-        _hover={{ bg: "#181818", color: "secondary.500" }}
+        _hover={{
+          bg: "#181818",
+          color: "secondary.500",
+        }}
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
         _expanded={{ bg: "#181818" }}
@@ -52,10 +55,9 @@ export const DesktopSubMenu = ({ id, href, subItems }: MenuItemProps) => {
             passHref
             scroll={false}
             color={asPath.includes(id) ? "primary.500" : "secondary.500"}
+            _hover={{ color: "primary.500", textDecoration: "none" }}
           >
-            <MenuItem bg={"#181818"} _hover={{ color: "primary.500" }}>
-              {id}
-            </MenuItem>
+            <MenuItem bg={"#181818"}>{id}</MenuItem>
           </Link>
         ))}
       </MenuList>

@@ -15,6 +15,9 @@ import { IconTextList } from "./components/IconTextList";
 import { TextList } from "./components/TextList";
 
 import { News } from "../News";
+import { CurrentRanking } from "../CurrentRanking";
+import { Calendar } from "../Calendar";
+import { CardBvg } from "../CardBvg";
 
 export const PageConstructor = ({ text }: TextsProps) => {
   return (
@@ -103,8 +106,20 @@ export const PageConstructor = ({ text }: TextsProps) => {
             </Button>
           </When>
 
+          <When value={type === "calendar"}>
+            <Calendar />
+          </When>
+
+          <When value={type === "cardBvg"}>
+            <CardBvg />
+          </When>
+
           <When value={type === "columns"}>
             <Columns columns={texts} />
+          </When>
+
+          <When value={type === "currentRanking"}>
+            <CurrentRanking />
           </When>
 
           <When value={type === "linkbox"}>
@@ -116,7 +131,7 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "news"}>
-            <News />
+            <News type="Box" />
           </When>
 
           <When value={type === "iconlist"}>

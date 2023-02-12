@@ -24,9 +24,17 @@ function Home({
       <Page title={pageTitle} description={description}>
         <Box
           mx="auto"
-          backgroundImage={"/bkg/bkg_01.jpg"}
+          backgroundImage={"/bkg/bkg_02.jpg"}
           backgroundSize="cover"
-          backgroundPosition={"bottom"}
+          backgroundPosition={"center"}
+          backgroundRepeat={[
+            "repeat-y",
+            "repeat-y",
+            "repeat-y",
+            "repeat-y",
+            "no-repeat",
+          ]}
+          height={"100%"}
         >
           <Content>
             <PageConstructor text={texts} />
@@ -50,20 +58,15 @@ export const getStaticProps: GetStaticProps = async () => {
           type: "column",
           texts: [
             {
-              id: "paragraph_01",
-              type: "paragraph",
-              text: "Teste",
+              id: "news_01",
+              type: "news",
+              text: "",
             },
-          ],
-        },
-        {
-          id: "column_03",
-          type: "column",
-          texts: [
             {
-              id: "paragraph_04",
-              type: "paragraph",
-              text: "Teste",
+              id: "video_01",
+              type: "video",
+              text: "Última etapa JGTC",
+              path: "https://www.youtube.com/embed/SPhsvLUOXvQ",
             },
           ],
         },
@@ -72,15 +75,26 @@ export const getStaticProps: GetStaticProps = async () => {
           type: "column",
           texts: [
             {
-              id: "news_01",
-              type: "news",
+              id: "calendar_01",
+              type: "calendar",
               text: "",
             },
             {
-              id: "video_01",
-              type: "video",
-              text: "ARSO",
-              path: "https://www.youtube.com/embed/W2KIYr2pk7I",
+              id: "cardBvg_01",
+              type: "cardBvg",
+              text: "",
+            },
+          ],
+        },
+
+        {
+          id: "column_03",
+          type: "column",
+          texts: [
+            {
+              id: "cR_01",
+              type: "currentRanking",
+              text: "",
             },
           ],
         },

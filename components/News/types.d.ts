@@ -10,3 +10,7 @@ export type NewsProps = {
   image?: string;
   url: string;
 };
+
+export type NewsContainerProps = {
+  type: string;
+};

@@ -1,14 +1,7 @@
 import React from "react";
-import { Flex, Box, Text, Link, Icon, Tooltip } from "@chakra-ui/react";
+import { Flex, Text, Link, Icon, Tooltip } from "@chakra-ui/react";
 
 import { IconContext } from "react-icons";
-
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaWhatsapp,
-  FaYoutube,
-} from "react-icons/fa";
 
 import { useSocialMedias } from "./hooks/useSocialMedias";
 

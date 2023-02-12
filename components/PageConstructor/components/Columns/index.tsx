@@ -13,6 +13,8 @@ export const Columns = ({ columns }: ColumnsProps) => {
       my={2}
       gap={8}
       flexDirection={["column", "column", "column", "row"]}
+      align={["center", "center", "center", "start"]}
+      justifyContent="center"
     >
       {columns.map(({ id, texts }) => (
         <React.Fragment key={id}>

@@ -1,4 +1,5 @@
 import React from "react";
+import ToTopButton from "../ToTopButton";
 import { Flex, FlexProps } from "@chakra-ui/react";
 
 export const Content = ({ children, ...rest }: FlexProps) => {
@@ -11,7 +12,10 @@ export const Content = ({ children, ...rest }: FlexProps) => {
       direction="column"
       {...rest}
     >
-      <React.Fragment>{children}</React.Fragment>
+      <React.Fragment>
+        <ToTopButton />
+        {children}
+      </React.Fragment>
     </Flex>
   );
 };

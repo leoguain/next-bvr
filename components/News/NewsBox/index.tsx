@@ -5,10 +5,10 @@ import { NewsProps } from "../types";
 
 export const NewsBox = ({ id, title, data, texto, image, url }: NewsProps) => {
   return (
-    <Flex mt={4} maxW="sm" direction="column">
+    <Flex mt={2} maxW="sm" direction="column" justifyContent={"center"}>
       <Box key={id}>
         <Flex
-          bg={"secondary.500"}
+          bg={"secondary.700"}
           color="primary.500"
           justifyContent={"center"}
           maxWidth={40}
@@ -16,7 +16,7 @@ export const NewsBox = ({ id, title, data, texto, image, url }: NewsProps) => {
         >
           {data}
         </Flex>
-        <Box bg={"#3f3f3f"} borderBottomRadius="xl">
+        <Box bg={"secondary.500"} borderBottomRadius="xl" maxWidth={80}>
           <Text
             color="primary.500"
             align={"center"}
@@ -31,6 +31,7 @@ export const NewsBox = ({ id, title, data, texto, image, url }: NewsProps) => {
           </Text>
           <Link href={url} target="_blank" rel="noreferrer">
             <Text
+              h={8}
               borderBottomRadius="xl"
               bg={"secondary.500"}
               color="primary.500"

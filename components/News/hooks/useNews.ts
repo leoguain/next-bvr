@@ -10,6 +10,24 @@ export const useNews = () => {
   const news = useMemo(
     () => [
       {
+        id: "11",
+        title: "Resultados da segunda etapa do JGTC 90s",
+        data: "13/02/2023",
+        texto:
+          "A etapa de Nürburgring não teve chuva e acabou sendo bem mais tranquila do que a primeira etapa. Tranquila, mas ainda assim repleta de disputas do começo ao fim da prova, com direito a briga por posição na linha de chegada! Confira o resultado aqui:",
+        image: "",
+        url: "/campeonatos",
+      },
+      {
+        id: "10",
+        title: "Resultados da primeira etapa do JGTC 90s",
+        data: "05/02/2023",
+        texto:
+          "Primeira etapa cheia de reviravoltas em Fuji! Veja o resultado geral da corrida que tivemos quinta-feira, onde a chuva mudou o rumo da corrida. Veja a corrida no nosso canal no Youtube!",
+        image: "",
+        url: "/campeonatos",
+      },
+      {
         id: "9",
         title: "É hoje o grande dia!",
         data: "02/02/2023",
