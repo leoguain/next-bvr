@@ -9,7 +9,6 @@ import { useTableHeader } from "../../hooks/useTableHeader";
 import { DataHeader } from "../DataHeader";
 
 export const ChampionshipData = ({
-  id,
   title,
   logo,
   colors,

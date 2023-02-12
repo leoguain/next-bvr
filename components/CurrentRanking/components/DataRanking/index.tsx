@@ -34,7 +34,7 @@ export const DataRanking = ({ rankingType }: TypeProps) => {
       />
 
       <Box gap={4} mt={2}>
-        {dataRanking.map(({ pos, driver, idPsn, total }) => (
+        {dataRanking.map(({ pos, driver, total }) => (
           <Flex key={driver} m={1} justifyContent="space-between">
             <Flex w={8} bg={colorHead} px={2} justifyContent="center">
               <Text color="#fff">{pos}</Text>

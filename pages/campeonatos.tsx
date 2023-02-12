@@ -13,7 +13,6 @@ import { ChampionshipResults } from "@/components/ChampionshipsResults";
 function Campeonatos({
   pageTitle,
   description,
-  texts,
   title,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
@@ -40,19 +39,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const title = "Campeonatos 2021/2023";
   const description =
     "Confira todos os campeonatos das temporadas 2023/2022/2021";
-  const texts = [
-    {
-      id: "news_01",
-      type: "news",
-      text: "",
-    },
-  ];
 
   return {
     props: {
       pageTitle,
       description,
-      texts,
       title,
     },
     revalidate: 60 * 60 * 24,

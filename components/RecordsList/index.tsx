@@ -41,11 +41,8 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
                     year,
                     platform,
                     category,
-                    date,
-                    idDriverPole,
                     driverPole,
                     timePole,
-                    idDriverVMR,
                     driverVMR,
                     timeVMR,
                   }) => (

@@ -1,14 +1,11 @@
 import React from "react";
-import { Flex, VStack, Text, Box } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 
-import { useNews } from "./hooks/useNews";
 import { NewsBox } from "./NewsBox";
 
-import { NewsContainerProps } from "./types";
+import { AllNewsProps } from "./types";
 
-export const News = ({ type }: NewsContainerProps) => {
-  const { news } = useNews();
-
+export const News = ({ type, news }: AllNewsProps) => {
   if (type === "Box") {
     return (
       <Flex

@@ -9,7 +9,6 @@ import { useTableHeader } from "../../hooks/useTableHeader";
 import { DataHeader } from "../DataHeader";
 
 export const ChampionshipDataMobile = ({
-  id,
   title,
   logo,
   colors,
@@ -156,33 +155,3 @@ export const ChampionshipDataMobile = ({
     </React.Fragment>
   );
 };
-
-/*
-
-
- <Flex
-            bg={colors.head}
-            gap={2}
-            align="center"
-            display={["none", "none", "none", "none", "flex"]}
-          >
-            {tracks.map(({ race, name, url }) => (
-              <Box key={race} w={"85px"} p={2}>
-                <Text align={"center"} color={"primary.500"} fontSize="xs">
-                  {name}
-                </Text>
-              </Box>
-            ))}
-          </Flex>
-
-           <Flex align={"center"} bg={colors.row} gap={2}>
-                  {points.map(({ et, pt }) => (
-                    <Box key={et} w={"85px"} p={2}>
-                      <Text align={"center"} color={colors.txt} fontSize="md">
-                        {pt}
-                      </Text>
-                    </Box>
-                  ))}
-                </Flex>
-
-          */

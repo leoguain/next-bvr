@@ -1,13 +1,14 @@
 import React from "react";
-import { Flex, Text, Link, Icon, Tooltip } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 import { IconContext } from "react-icons";
+import { FaInstagramSquare, FaYoutube } from "react-icons/fa";
 
-import { useCalendar } from "./hooks/useCalendar";
+import { When } from "../shared/When";
 
-export const Calendar = () => {
-  const { calendar } = useCalendar();
+import { CalendarProps } from "./types";
 
+export const Calendar = ({ events }: CalendarProps) => {
   return (
     <React.Fragment>
       <Flex
@@ -45,7 +46,7 @@ export const Calendar = () => {
           }}
         >
           <IconContext.Provider value={{ color: "#fff" }}>
-            {calendar.map(({ id, date, start, title, text, icon }) => (
+            {events.map(({ id, date, start, title, text, icon }) => (
               <Flex key={id} align="center" gap={6} px={2}>
                 <Flex direction={"column"} align="center">
                   <Text color={"primary.500"}>{date}</Text>
@@ -59,7 +60,13 @@ export const Calendar = () => {
                     {text}
                   </Text>
                 </Flex>
-                <Icon as={icon} boxSize={"1.5em"} />
+
+                <When value={icon === "youtube"}>
+                  <FaYoutube size={"1.5em"} />
+                </When>
+                <When value={icon === "instagram"}>
+                  <FaInstagramSquare size={"1.5em"} />
+                </When>
               </Flex>
             ))}
           </IconContext.Provider>

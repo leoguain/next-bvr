@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Flex, Link, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 
 import { NewsProps } from "../types";
 
-export const NewsBox = ({ id, title, data, texto, image, url }: NewsProps) => {
+export const NewsBox = ({ id, title, data, texto, url }: NewsProps) => {
   return (
     <Flex mt={2} maxW="sm" direction="column" justifyContent={"center"}>
       <Box key={id}>

@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
 import {
-  Box,
   Flex,
   Image,
   Text,
@@ -80,38 +79,3 @@ export const ChampionshipSelector = () => {
     </React.Fragment>
   );
 };
-
-/*
-
-<Box m={4} p={4} borderRadius="lg" justifyContent="center">
-        <Text align={"center"} color={"primary.500"} fontSize="lg" mt={4}>
-          Escolha o campeonato desejado:
-        </Text>
-        <Flex
-          p={4}
-          borderRadius="lg"
-          gap={[2, 8]}
-          justifyContent="center"
-          flexFlow={"row wrap"}
-        >
-          {championships.map((championship) => (
-            <React.Fragment key={championship.id}>
-              <Image
-                alt="logo do campeonato"
-                src={championship.logo}
-                borderRadius="lg"
-                border="2px"
-                borderColor={"transparent"}
-                cursor={"pointer"}
-                _hover={{ borderColor: "#fff" }}
-                onClick={() => {
-                  handleCupClick(championship);
-                }}
-              />
-            </React.Fragment>
-          ))}
-        </Flex>
-      </Box>
-
-
-      */

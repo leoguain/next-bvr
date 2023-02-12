@@ -1,7 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Image, Link } from "@chakra-ui/react";
-import { FaFilePdf } from "react-icons/fa";
-import { IconContext } from "react-icons";
+import { Flex, Box, Text, Image } from "@chakra-ui/react";
 
 import { ChampionsProps } from "./types";
 

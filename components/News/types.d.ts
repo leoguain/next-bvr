@@ -1,4 +1,5 @@
 export type AllNewsProps = {
+  type: string;
   news: NewsProps[];
 };
 
@@ -7,10 +8,6 @@ export type NewsProps = {
   title: string;
   data: string;
   texto: string;
-  image?: string;
+  image: string;
   url: string;
-};
-
-export type NewsContainerProps = {
-  type: string;
 };

@@ -1,12 +1,6 @@
 import { useMemo } from "react";
 
-import { MOBILE_BREAKPOINT } from "../../../lib/constants";
-
-import { useWindowSize } from "../../../hooks/useWindowsSize";
-
 export const useNews = () => {
-  const { width } = useWindowSize();
-
   const news = useMemo(
     () => [
       {
@@ -112,10 +106,7 @@ export const useNews = () => {
     []
   );
 
-  const isMobile = width < MOBILE_BREAKPOINT;
-
   return {
     news,
-    isMobile,
   };
 };

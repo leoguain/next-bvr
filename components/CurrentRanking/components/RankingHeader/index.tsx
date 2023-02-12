@@ -23,8 +23,8 @@ export const RankingHeader = ({
       <Image
         alt="logo do campeonato"
         src="/bvg/BVG_logo_branco.png"
-        w={["64px"]}
-        h={["12px"]}
+        w={["4em"]}
+        h={["0.75em"]}
       />
     </Flex>
   );

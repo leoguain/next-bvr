@@ -107,7 +107,7 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "calendar"}>
-            <Calendar />
+            <Calendar events={texts} />
           </When>
 
           <When value={type === "cardBvg"}>
@@ -131,7 +131,7 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "news"}>
-            <News type="Box" />
+            <News type="Box" news={texts} />
           </When>
 
           <When value={type === "iconlist"}>
