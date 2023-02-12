@@ -20,11 +20,6 @@ export const useHeader = () => {
         subItems: [],
       },
       {
-        id: "Hall da Fama",
-        href: "/hall-da-fama",
-        subItems: [],
-      },
-      {
         id: "Notícias",
         href: "/noticias",
         subItems: [],
@@ -40,6 +35,10 @@ export const useHeader = () => {
           {
             id: "Estatísticas",
             href: "/pilotos",
+          },
+          {
+            id: "Hall da Fama",
+            href: "/hall-da-fama",
           },
         ],
       },
