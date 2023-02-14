@@ -18,7 +18,7 @@ export const YoutubePlaylist = ({ data }: any) => {
         BVGtv!
       </Text>
       <Flex justifyContent={"center"} gap={4} flexFlow="wrap" my={4}>
-        {data.items.map((item) => (
+        {data.items.map((item: any) => (
           <Flex key={item.id}>
             <Link
               color="secondary.500"
