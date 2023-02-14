@@ -9,6 +9,7 @@ import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
 
 import { ChampionsList } from "@/components/ChampionsList";
+import { champions } from "../hooks/useChampions";
 
 function Documentos({
   pageTitle,
@@ -39,56 +40,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const pageTitle = "Hall da Fama - Brasil Virtual Racing";
   const title = "Hall da Fama";
   const description = "Bem-vindo à Liga BVR.";
-  const champions = [
-    {
-      idUrl: 1,
-      url: "/champions/campSilvia22.jpg",
-    },
-    {
-      idUrl: 2,
-      url: "/champions/campNascar22.jpg",
-    },
-    {
-      idUrl: 3,
-      url: "/champions/campMazda22.jpg",
-    },
-
-    {
-      idUrl: 4,
-      url: "/champions/campGT3.jpg",
-    },
-    {
-      idUrl: 5,
-      url: "/champions/campGR4.jpg",
-    },
-    {
-      idUrl: 6,
-      url: "/champions/campToyota.jpg",
-    },
-    {
-      idUrl: 7,
-      url: "/champions/campBMW.jpg",
-    },
-    {
-      idUrl: 8,
-      url: "/champions/campGT500.jpg",
-    },
-    {
-      idUrl: 9,
-      url: "/champions/campMazda21.jpg",
-    },
-    {
-      idUrl: 10,
-      url: "/champions/campPorsche21.jpg",
-    },
-  ];
 
   return {
     props: {
       pageTitle,
       description,
       title,
-      champions,
+      champions: champions,
     },
     revalidate: 60 * 60 * 24,
   };

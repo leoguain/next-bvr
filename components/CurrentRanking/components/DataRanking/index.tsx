@@ -2,14 +2,16 @@ import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 
 import { RankingHeader } from "../RankingHeader";
-import { useCurrentRanking } from "../../hooks/useCurrentRanking";
-import { TypeProps } from "../../types";
+import { CurrentRankingsBoxProps } from "../../types";
 
-export const DataRanking = ({ rankingType }: TypeProps) => {
-  const { currentRanking } = useCurrentRanking();
-  const colorHead = currentRanking[0].colors.head;
-  const colorRow = currentRanking[0].colors.row;
-  const colorText = currentRanking[0].colors.txt;
+export const DataRanking = ({
+  rankingType,
+  ranking,
+}: CurrentRankingsBoxProps) => {
+  console.log(ranking);
+  const colorHead = ranking[0].colors.head;
+  const colorRow = ranking[0].colors.row;
+  const colorText = ranking[0].colors.txt;
 
   const headerLabel: string =
     rankingType === "Geral"
@@ -20,16 +22,16 @@ export const DataRanking = ({ rankingType }: TypeProps) => {
 
   const dataRanking =
     rankingType === "Geral"
-      ? currentRanking[0].geral
+      ? ranking[0].geral
       : rankingType === "Sprint"
-      ? currentRanking[0].sprint
-      : currentRanking[0].principal;
+      ? ranking[0].sprint
+      : ranking[0].principal;
 
   return (
     <React.Fragment>
       <RankingHeader
-        titleCup={currentRanking[0].championship}
-        logoCup={currentRanking[0].logo}
+        titleCup={ranking[0].championship}
+        logoCup={ranking[0].logo}
         typeRace={headerLabel}
       />
 

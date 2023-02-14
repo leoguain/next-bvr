@@ -1,8 +1,5 @@
-import { useMemo } from "react";
 
-export const useNews = () => {
-  const news = useMemo(
-    () => [
+export const news = [
       {
         id: "11",
         title: "Resultados da segunda etapa do JGTC 90s",
@@ -102,11 +99,4 @@ export const useNews = () => {
         image: "/liga_bvr_gt_branco.png",
         url: "https://www.youtube.com/watch?v=TYG3lfU5EoY",
       },
-    ],
-    []
-  );
-
-  return {
-    news,
-  };
-};
+    ];

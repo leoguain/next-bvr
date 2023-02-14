@@ -1,5 +1,5 @@
 export type ChampionshipsProps = {
-  championship: ChampionshipProps[];
+  championships: ChampionshipProps[];
 };
 
 export type DataHeaderProps = {

@@ -8,7 +8,7 @@ import { When } from "../shared/When";
 
 import { CalendarProps } from "./types";
 
-export const Calendar = ({ events }: CalendarProps) => {
+export const Calendar = ({ calendar }: CalendarProps) => {
   return (
     <React.Fragment>
       <Flex
@@ -46,7 +46,7 @@ export const Calendar = ({ events }: CalendarProps) => {
           }}
         >
           <IconContext.Provider value={{ color: "#fff" }}>
-            {events.map(({ id, date, start, title, text, icon }) => (
+            {calendar.map(({ id, date, start, title, text, icon }) => (
               <Flex key={id} align="center" gap={6} px={2}>
                 <Flex direction={"column"} align="center">
                   <Text color={"primary.500"}>{date}</Text>

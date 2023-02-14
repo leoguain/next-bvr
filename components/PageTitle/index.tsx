@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { TitleProps } from "./types";
 
-export const PageTitle = ({ pageTitle, pageUrl }: TitleProps) => {
+export const PageTitle = ({ pageTitle }: TitleProps) => {
   return (
     <Flex
       bg={"rgba(18, 18, 18, 0.7)"}

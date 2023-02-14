@@ -1,5 +1,5 @@
 export type CalendarProps = {
-  events: EventProps[];
+  calendar: EventProps[];
 };
 
 export type EventProps = {

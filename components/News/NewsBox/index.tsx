@@ -5,43 +5,41 @@ import { NewsProps } from "../types";
 
 export const NewsBox = ({ id, title, data, texto, url }: NewsProps) => {
   return (
-    <Flex mt={2} maxW="sm" direction="column" justifyContent={"center"}>
-      <Box key={id}>
-        <Flex
-          bg={"secondary.700"}
+    <Flex m={2} maxW="sm" direction="column" justifyContent={"center"} key={id}>
+      <Flex
+        bg={"secondary.700"}
+        color="primary.500"
+        justifyContent={"center"}
+        maxWidth={40}
+        borderTopRadius="md"
+      >
+        {data}
+      </Flex>
+      <Box bg={"secondary.500"} borderBottomRadius="xl" maxWidth={80}>
+        <Text
           color="primary.500"
-          justifyContent={"center"}
-          maxWidth={40}
-          borderTopRadius="md"
+          align={"center"}
+          borderBottom={"1px"}
+          py={2}
+          borderColor="primary.500"
         >
-          {data}
-        </Flex>
-        <Box bg={"secondary.500"} borderBottomRadius="xl" maxWidth={80}>
+          {title}
+        </Text>
+        <Text bg={"#505050"} color="primary.500" p={2}>
+          {texto}
+        </Text>
+        <Link href={url} target="_blank" rel="noreferrer">
           <Text
+            h={8}
+            borderBottomRadius="xl"
+            bg={"secondary.500"}
             color="primary.500"
             align={"center"}
-            borderBottom={"1px"}
-            py={2}
-            borderColor="primary.500"
+            _hover={{ bg: "secondary.700" }}
           >
-            {title}
+            Veja mais
           </Text>
-          <Text bg={"#505050"} color="primary.500" p={2}>
-            {texto}
-          </Text>
-          <Link href={url} target="_blank" rel="noreferrer">
-            <Text
-              h={8}
-              borderBottomRadius="xl"
-              bg={"secondary.500"}
-              color="primary.500"
-              align={"center"}
-              _hover={{ bg: "secondary.700" }}
-            >
-              Veja mais
-            </Text>
-          </Link>
-        </Box>
+        </Link>
       </Box>
     </Flex>
   );

@@ -17,6 +17,7 @@ import { TextList } from "./components/TextList";
 import { News } from "../News";
 import { CurrentRanking } from "../CurrentRanking";
 import { Calendar } from "../Calendar";
+
 import { CardBvg } from "../CardBvg";
 
 export const PageConstructor = ({ text }: TextsProps) => {
@@ -107,7 +108,7 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "calendar"}>
-            <Calendar events={texts} />
+            <Calendar calendar={texts} />
           </When>
 
           <When value={type === "cardBvg"}>
@@ -119,7 +120,7 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "currentRanking"}>
-            <CurrentRanking />
+            <CurrentRanking ranking={texts} />
           </When>
 
           <When value={type === "linkbox"}>

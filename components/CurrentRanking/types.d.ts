@@ -1,3 +1,8 @@
+export type CurrentRankingsBoxProps = {
+  rankingType: string;
+  ranking: RankingProps[];
+};
+
 export type CurrentRankingProps = {
   ranking: RankingProps[];
 };
@@ -34,8 +39,4 @@ export type ResultsProps = {
   driver: string;
   idPsn: string;
   total: number;
-};
-
-export type TypeProps = {
-  rankingType: string;
 };

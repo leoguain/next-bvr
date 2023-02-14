@@ -8,16 +8,17 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
-import { ChampionshipResults } from "@/components/ChampionshipsResults";
-import { championships } from "../hooks/useChampionships";
+import { YoutubePlaylist } from "@/components/YoutubePlaylist";
 
-function Campeonatos({
+function Recordes({
   pageTitle,
   description,
   title,
-  championships,
+  data,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
+
+  console.log(data);
 
   return (
     <React.Fragment>
@@ -29,7 +30,7 @@ function Campeonatos({
       <Page title={pageTitle} description={description}>
         <Content>
           <PageTitle pageTitle={title} pageUrl={asPath} />
-          <ChampionshipResults championships={championships} />
+          <YoutubePlaylist data={data} />
         </Content>
       </Page>
     </React.Fragment>
@@ -37,20 +38,27 @@ function Campeonatos({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const pageTitle = "Campeonatos - Brasil Virtual Racing";
-  const title = "Campeonatos 2021/2023";
-  const description =
-    "Confira todos os campeonatos das temporadas 2023/2022/2021";
+  const pageTitle = "Sem vídeo disponível - Brasil Virtual Racing";
+  const title = "Corrida sem vídeo disponível";
+  const description = "Essa corrida ainda não foi transmitida :(.";
+
+  const YOUTUBE_PLAYLIST_ITEMS_API =
+    "https://www.googleapis.com/youtube/v3/playlistItems";
+
+  const res = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&maxResults=6&key=${process.env.YOUTUBE_API_KEY}`
+  );
+  const data = await res.json();
 
   return {
     props: {
       pageTitle,
       description,
       title,
-      championships: championships,
+      data,
     },
     revalidate: 60 * 60 * 24,
   };
 };
 
-export default Campeonatos;
+export default Recordes;

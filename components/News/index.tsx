@@ -43,16 +43,15 @@ export const News = ({ type, news }: AllNewsProps) => {
           }}
         >
           {news.map(({ id, title, data, texto, image, url }) => (
-            <React.Fragment key={id}>
-              <NewsBox
-                id={id}
-                title={title}
-                data={data}
-                texto={texto}
-                image={image}
-                url={url}
-              />
-            </React.Fragment>
+            <NewsBox
+              key={id}
+              id={id}
+              title={title}
+              data={data}
+              texto={texto}
+              image={image}
+              url={url}
+            />
           ))}
         </Flex>
       </Flex>
@@ -93,16 +92,15 @@ export const News = ({ type, news }: AllNewsProps) => {
           }}
         >
           {news.map(({ id, title, data, texto, image, url }) => (
-            <Flex key={id} m={1} align="center">
-              <NewsBox
-                id={id}
-                title={title}
-                data={data}
-                texto={texto}
-                image={image}
-                url={url}
-              />
-            </Flex>
+            <NewsBox
+              key={id}
+              id={id}
+              title={title}
+              data={data}
+              texto={texto}
+              image={image}
+              url={url}
+            />
           ))}
         </Flex>
       </Box>
