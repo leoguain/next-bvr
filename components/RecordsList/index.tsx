@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 
 import { RecordListProps } from "./types";
+import { RecordField } from "./components/RecordField";
 
 export const RecordsList = ({ tracks }: RecordListProps) => {
   return (
@@ -27,7 +28,7 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
           <Flex key={idRecord} m={2} align="center" justifyContent={"center"}>
             <Box px={2}>
               <Text
-                bg={"rgba(18, 18, 18, 0.7)"}
+                bg={"secondary.500"}
                 px={2}
                 color="#fff"
                 fontSize={["md", "md", "md", "xl"]}
@@ -52,72 +53,45 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
                     borderBottom="2px"
                     borderColor={"#fff"}
                     direction={["column", "column", "column", "row"]}
-                    mb={4}
+                    mb={[8]}
                   >
                     <Flex
                       justifyContent={"center"}
                       borderBottom={["1px", "1px", "1px", "0px"]}
                       borderColor={["#fff", "#fff", "#fff"]}
-                      py={[4, 4, 4, 2]}
+                      mt={[0, 0, 0, 2]}
+                      py={[2, 2, 2, 0]}
+                      align="center"
                     >
-                      <Flex
-                        direction={["column"]}
-                        w={"12em"}
-                        bg={"rgba(18, 18, 18, 0.4)"}
-                        p={2}
-                      >
-                        <Text color="#fff" fontSize={"sm"}>
-                          Categoria
-                        </Text>
-                        <Text color="#fff" fontWeight={"semibold"}>
-                          {category}
-                        </Text>
-                        <Text color="#fff" fontSize={"sm"}>
-                          {platform}
-                        </Text>
-                      </Flex>
-                      <Flex direction={["column"]} w={"12em"} p={2}>
-                        <Text color="#fff" fontSize={"sm"}>
-                          Campeonato
-                        </Text>
-                        <Text color="#fff" fontWeight={"semibold"}>
-                          {championship}
-                        </Text>
-                        <Text color="#fff" fontSize={"sm"}>
-                          {year}
-                        </Text>
-                      </Flex>
+                      <RecordField
+                        topLabel="Categoria"
+                        title={category}
+                        bottomLabel={platform}
+                        type="box"
+                        darken
+                      />
+                      <RecordField
+                        topLabel="Campeonato"
+                        title={championship}
+                        bottomLabel={year}
+                        type="box"
+                      />
                     </Flex>
 
                     <Flex direction={"column"}>
-                      <Flex
-                        gap={2}
-                        borderBottom="1px"
-                        borderColor={"#fff"}
-                        p={2}
-                        bg={"rgba(18, 18, 18, 0.4)"}
-                      >
-                        <Text w={"7em"} color="#fff" fontSize={"sm"}>
-                          Pole Position
-                        </Text>
-                        <Text w={"10em"} color="#fff">
-                          {driverPole}
-                        </Text>
-                        <Text color="#f13beb" fontWeight="semibold">
-                          {timePole}
-                        </Text>
-                      </Flex>
-                      <Flex gap={2} p={2}>
-                        <Text w={"7em"} color="#fff" fontSize={"sm"}>
-                          VMR
-                        </Text>
-                        <Text w={"10em"} color="#fff">
-                          {driverVMR}
-                        </Text>
-                        <Text color="#f13beb" fontWeight="semibold">
-                          {timeVMR}
-                        </Text>
-                      </Flex>
+                      <RecordField
+                        topLabel="Pole Position"
+                        title={driverPole}
+                        bottomLabel={timePole}
+                        type="row"
+                        darken
+                      />
+                      <RecordField
+                        topLabel="VMR"
+                        title={driverVMR}
+                        bottomLabel={timeVMR}
+                        type="row"
+                      />
                     </Flex>
                   </Flex>
                 )

@@ -52,3 +52,10 @@ export type DriverBoxProps = {
   countVMR: number;
   index: number;
 };
+
+export type DriverFieldProps = {
+  label: string;
+  value: number | string;
+  size: string;
+  reverse?: boolean;
+};

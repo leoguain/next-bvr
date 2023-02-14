@@ -21,3 +21,11 @@ export type RecordProps = {
   driverVMR: string;
   timeVMR: string;
 };
+
+export type RecordFieldProps = {
+  topLabel: string;
+  title: number | string;
+  bottomLabel: string;
+  type: string;
+  darken?: boolean;
+};

@@ -4,6 +4,9 @@ import { parse, differenceInYears } from "date-fns";
 
 import { DriverBoxProps } from "../../types";
 
+import { When } from "../../../shared/When";
+import { DriverField } from "../DriverField";
+
 export const DriverBox = ({
   idDriver,
   driver,
@@ -50,77 +53,23 @@ export const DriverBox = ({
           flexFlow={"wrap row"}
           gap={6}
           justifyContent="center"
-          align={"center"}
           p={2}
           bg={"rgba(18, 18, 18, 0.4)"}
         >
-          <Flex direction={"column"} align="center">
-            <Text color="#fff" fontSize={"sm"} fontWeight={"semibold"}>
-              {age}
-            </Text>
-            <Text color="#fff" fontSize={"sm"}>
-              anos
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"sm"}>
-              Equipe
-            </Text>
-            <Text color="#fff" fontSize={"sm"} fontWeight={"semibold"}>
-              {team}
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"sm"}>
-              Carteira
-            </Text>
-            <Text color="#fff" fontSize={"sm"} fontWeight={"semibold"}>
-              {license}
-            </Text>
-          </Flex>
+          <When value={age !== 0}>
+            <DriverField label="anos" value={age} size="sm" reverse />
+          </When>
+
+          <DriverField label="Equipe" value={team} size="sm" />
+          <DriverField label="Carteira" value={license} size="sm" />
         </Flex>
 
         <Flex flexFlow={"wrap row"} gap={2} justifyContent="center" p={2}>
-          <Flex direction={"column"} align="center">
-            <Text color="#fff" fontSize={"xs"} fontWeight={"semibold"}>
-              {validPoints}
-            </Text>
-            <Text color="#fff" fontSize={"xs"}>
-              pontos
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"xs"} fontWeight={"semibold"}>
-              {countRaces}
-            </Text>
-            <Text color="#fff" fontSize={"xs"}>
-              Corridas
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"xs"} fontWeight={"semibold"}>
-              {countP1}
-            </Text>
-            <Text color="#fff" fontSize={"xs"}>
-              Vitórias
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"xs"} fontWeight={"semibold"}>
-              {countPoles}
-            </Text>
-            <Text color="#fff" fontSize={"xs"}>
-              Poles
-            </Text>
-          </Flex>
-          <Flex direction={"column"} justifyContent="center" align="center">
-            <Text color="#fff" fontSize={"xs"} fontWeight={"semibold"}>
-              {countVMR}
-            </Text>
-            <Text color="#fff" fontSize={"xs"}>
-              VMR
-            </Text>
-          </Flex>
+          <DriverField label="Pontos" value={validPoints} size="xs" reverse />
+          <DriverField label="Corridas" value={countRaces} size="xs" reverse />
+          <DriverField label="Vitórias" value={countP1} size="xs" reverse />
+          <DriverField label="Poles" value={countPoles} size="xs" reverse />
+          <DriverField label="VMR" value={countVMR} size="xs" reverse />
         </Flex>
       </Flex>
     </Flex>
