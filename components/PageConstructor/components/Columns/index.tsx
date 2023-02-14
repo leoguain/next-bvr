@@ -11,7 +11,7 @@ export const Columns = ({ columns }: ColumnsProps) => {
       maxWidth={"7xl"}
       mx="auto"
       my={2}
-      gap={8}
+      gap={[2, 4, 4, 4, 8]}
       flexDirection={["column", "column", "column", "row"]}
       align={["center", "center", "center", "start"]}
       justifyContent="center"

@@ -17,14 +17,11 @@ export const Header = () => {
       <Flex
         position="sticky"
         top="0"
-        left="0"
-        right="0"
-        zIndex="5"
         bg={"#181818"}
         w="100%"
         mx="auto"
         maxW={"7xl"}
-        px={[4, 6, 6, 6, 14]}
+        px={[4, 6, 6, 6, 4]}
         py={6}
         gap={[0, 2, 8]}
         justifyContent={["space-between"]}

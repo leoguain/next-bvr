@@ -28,7 +28,7 @@ export const DataRanking = ({
       : ranking[0].principal;
 
   return (
-    <React.Fragment>
+    <Flex direction={"column"} align="center">
       <RankingHeader
         titleCup={ranking[0].championship}
         logoCup={ranking[0].logo}
@@ -52,6 +52,6 @@ export const DataRanking = ({
           </Flex>
         ))}
       </Box>
-    </React.Fragment>
+    </Flex>
   );
 };

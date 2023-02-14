@@ -16,19 +16,29 @@ export const CardBvg = () => {
         maxW={"sm"}
         direction="column"
       >
-        <Flex align="center">
+        <Flex align="center" gap={2}>
           <Image
             alt="logo do campeonato"
             src="/bvg/BVG_logo_branco.png"
-            w="150px"
+            w="9.3em"
           />
-          <Text align={"end"} color={"primary.500"}>
+          <Text
+            align={"end"}
+            color={"primary.500"}
+            fontSize={["sm", "sm", "sm", "sm", "md"]}
+            w="12em"
+          >
             Todas as nossas corridas são transmitidas pela BVGtv, no Youtube.
           </Text>
         </Flex>
 
-        <Flex align="center" justifyContent={"center"}>
-          <Text align={"center"} color={"primary.500"} fontSize="lg">
+        <Flex align="center" justifyContent={"center"} gap={2}>
+          <Text
+            align={"center"}
+            color={"primary.500"}
+            fontSize={["sm", "sm", "sm", "sm", "lg"]}
+            w="14em"
+          >
             Se inscreva no canal e não perca nossas corridas!
           </Text>
           <IconContext.Provider value={{ color: "#FF0000" }}>

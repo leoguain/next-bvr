@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Flex, Box, Button } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 
 import { useButtonsJGTC } from "./hooks/useButtonsJGTC";
 import { DataRanking } from "./components/DataRanking";
@@ -15,7 +15,12 @@ export const CurrentRanking = ({ ranking }: CurrentRankingProps) => {
   }, []);
 
   return (
-    <Box bg={"rgba(18, 18, 18, 0.9)"} mx={4} p={8} justifyContent="center">
+    <Flex
+      direction={"column"}
+      bg={"rgba(18, 18, 18, 0.9)"}
+      justifyContent="center"
+      py={4}
+    >
       {rankingType && (
         <DataRanking rankingType={rankingType} ranking={ranking} />
       )}
@@ -36,6 +41,6 @@ export const CurrentRanking = ({ ranking }: CurrentRankingProps) => {
           </Button>
         ))}
       </Flex>
-    </Box>
+    </Flex>
   );
 };
