@@ -6,7 +6,13 @@ import { RecordField } from "./components/RecordField";
 
 export const RecordsList = ({ tracks }: RecordListProps) => {
   return (
-    <Box bg={"rgba(18, 18, 18, 0.7)"} gap={4} mt={2} p={8}>
+    <Flex
+      direction={"column"}
+      bg={"rgba(18, 18, 18, 0.7)"}
+      gap={4}
+      mt={2}
+      p={8}
+    >
       <Text
         align={"center"}
         color={"primary.500"}
@@ -100,6 +106,6 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
           </Flex>
         ))}
       </Flex>
-    </Box>
+    </Flex>
   );
 };

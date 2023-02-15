@@ -19,7 +19,8 @@ export const CurrentRanking = ({ ranking }: CurrentRankingProps) => {
       direction={"column"}
       bg={"rgba(18, 18, 18, 0.9)"}
       justifyContent="center"
-      py={4}
+      p={4}
+      maxW={"sm"}
     >
       {rankingType && (
         <DataRanking rankingType={rankingType} ranking={ranking} />

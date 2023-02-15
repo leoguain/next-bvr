@@ -32,23 +32,24 @@ export const RecordField = ({
 
       <When value={type === "row"}>
         <Flex
-          gap={[1, 2]}
+          gap={[2]}
           borderBottom={border}
           borderColor={"#fff"}
           p={2}
           bg={bkgColor}
           align="center"
+          justifyContent={"center"}
         >
-          <Text w={["5em", "7em"]} color="#fff" fontSize={["xs", "sm"]}>
+          <Text w={["6em", "7em"]} color="#fff" fontSize={["xs", "sm"]}>
             {topLabel}
           </Text>
-          <Text w={["6.5em", "10em"]} color="#fff" fontSize={["xs", "md"]}>
+          <Text w={["7em", "10em"]} color="#fff" fontSize={["xs", "md"]}>
             {title}
           </Text>
           <Text
-            w={["4em", "4em"]}
+            w={["5em"]}
             color="#f13beb"
-            fontSize={["xs", "md"]}
+            fontSize={["md"]}
             fontWeight="semibold"
             align={"center"}
           >

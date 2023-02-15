@@ -18,16 +18,29 @@ export const ChampionshipDataMobile = ({
   const { header } = useTableHeader();
 
   return (
-    <Box bg={"rgba(18, 18, 18, 0.7)"} m={4} p={8} justifyContent="center">
+    <Flex
+      direction={"column"}
+      bg={"rgba(18, 18, 18, 0.7)"}
+      m={4}
+      p={8}
+      justifyContent="center"
+      align={"center"}
+      maxW={["sm", "md", "lg", "xl"]}
+    >
       <DataHeader titleCup={title} logoCup={logo} />
 
-      <Box mt={8}>
+      <Flex
+        direction={"column"}
+        mt={8}
+        align="center"
+        justifyContent={"center"}
+      >
         {results.map(
           ({ pos, driver, idPsn, penal, discard, total, points }) => (
             <React.Fragment key={pos}>
               <Flex align="center" justifyContent={"center"}>
-                {header.map(({ id, name, width }) => (
-                  <Box key={id} bg={colors.head} w={width} p={2}>
+                {header.map(({ id, name, mWidth }) => (
+                  <Box key={id} bg={colors.head} w={mWidth} py={2}>
                     <Text align={"center"} color={"primary.500"} fontSize="sm">
                       {name}
                     </Text>
@@ -42,13 +55,13 @@ export const ChampionshipDataMobile = ({
                 mb={8}
               >
                 <Flex align={"center"} bg={colors.row}>
-                  <Box w="45px" justifyContent={"center"} p={2}>
+                  <Box w="45px" justifyContent={"center"}>
                     <Text align={"center"} color={colors.txt} fontSize="sm">
                       {pos}
                     </Text>
                   </Box>
 
-                  <Box w="150px" justifyContent={"center"} p={2}>
+                  <Box w="140px" justifyContent={"center"}>
                     <Text
                       color={colors.txt}
                       fontSize="sm"
@@ -65,7 +78,7 @@ export const ChampionshipDataMobile = ({
                     </Text>
                   </Box>
 
-                  <Box w="60px" p={2}>
+                  <Box w="55px" p={2}>
                     <Text align={"center"} color={colors.txt} fontSize="sm">
                       {penal}
                     </Text>
@@ -75,7 +88,7 @@ export const ChampionshipDataMobile = ({
                       {discard}
                     </Text>
                   </Box>
-                  <Box w="60px" p={2}>
+                  <Box w="55px" p={2}>
                     <Text align={"center"} color={colors.txt} fontSize="md">
                       {total}
                     </Text>
@@ -97,7 +110,7 @@ export const ChampionshipDataMobile = ({
                           isExternal
                         >
                           <Flex
-                            w="60"
+                            w="220px"
                             bg={colors.head}
                             my={1}
                             p={2}
@@ -126,11 +139,19 @@ export const ChampionshipDataMobile = ({
                   </Flex>
                   <Flex direction={"column"} align={"center"}>
                     {points.map(({ et, pt }) => (
-                      <Box key={et} bg={colors.row} my={1} p={2} w="36">
-                        <Text align={"center"} color={colors.txt} fontSize="xs">
+                      <Flex
+                        key={et}
+                        bg={colors.row}
+                        my={1}
+                        p={2}
+                        w="150px"
+                        align={"center"}
+                        justifyContent="center"
+                      >
+                        <Text color={colors.txt} fontSize="xs">
                           {pt}
                         </Text>
-                      </Box>
+                      </Flex>
                     ))}
                   </Flex>
                 </Flex>
@@ -138,7 +159,7 @@ export const ChampionshipDataMobile = ({
             </React.Fragment>
           )
         )}
-      </Box>
-    </Box>
+      </Flex>
+    </Flex>
   );
 };
