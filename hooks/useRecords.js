@@ -914,7 +914,7 @@ export const records = [
   },
   {
     idRecord: 38,
-    track: "Spa",
+    track: "Spa-francorchamps",
     records: [
       {
         championship: "Porsche Cup Gemignani",

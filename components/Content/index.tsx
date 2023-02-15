@@ -1,6 +1,7 @@
 import React from "react";
 import ToTopButton from "../ToTopButton";
 import { Flex, FlexProps } from "@chakra-ui/react";
+import AdsComponent from "../AdsComponent";
 
 export const Content = ({ children, ...rest }: FlexProps) => {
   return (
@@ -9,6 +10,7 @@ export const Content = ({ children, ...rest }: FlexProps) => {
       backgroundAttachment="fixed"
       backgroundSize="cover"
       backgroundPosition={"center"}
+      direction="column"
     >
       <Flex
         w="100%"
@@ -22,6 +24,10 @@ export const Content = ({ children, ...rest }: FlexProps) => {
           <ToTopButton />
           {children}
         </React.Fragment>
+      </Flex>
+
+      <Flex w="100%" maxWidth={"7xl"} mx="auto" px={4}>
+        <AdsComponent dataAdSlot="8734328966" />
       </Flex>
     </Flex>
   );
