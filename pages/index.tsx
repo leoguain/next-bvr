@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
               id: "video_01",
               type: "video",
               text: "Última etapa JGTC",
-              path: "https://www.youtube.com/embed/SPhsvLUOXvQ",
+              path: "https://www.youtube.com/embed/uhWltdRJ1O0",
             },
           ],
         },

@@ -20,6 +20,11 @@ export const useHeader = () => {
         subItems: [],
       },
       {
+        id: "Inscrições",
+        href: "/inscricoes",
+        subItems: [],
+      },
+      {
         id: "Notícias",
         href: "/noticias",
         subItems: [],

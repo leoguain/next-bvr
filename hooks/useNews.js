@@ -1,5 +1,14 @@
 
 export const news = [
+  {
+    id: "12",
+    title: "Dudu Fiel vence a 3ª etapa do JGTC 90s",
+    data: "17/02/2023",
+    texto:
+      "Suzuka foi repleta de brigas, erros e ultrapassagens, mas no final, José Eduardo Filho, o Dudu Fiel, foi o vencedor da etapa, e agora é o líder do campeonato. Confira a corrida:",
+    image: "",
+    url: "https://www.youtube.com/watch?v=uhWltdRJ1O0",
+  },
       {
         id: "11",
         title: "Resultados da segunda etapa do JGTC 90s",

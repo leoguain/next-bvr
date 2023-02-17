@@ -18,6 +18,7 @@ export const Content = ({ children, ...rest }: FlexProps) => {
         mx="auto"
         px={4}
         direction="column"
+        minH={"md"}
         {...rest}
       >
         <React.Fragment>

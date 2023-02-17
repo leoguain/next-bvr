@@ -1,14 +1,6 @@
 
 export const calendar = [
   {
-    id: 1,
-    date: "16/02/2023",
-    start: "21h00",
-    title: "3ª Etapa - JGTC 90s",
-    text: "Suzuka Circuit",
-    icon: "youtube",
-  },
-  {
     id: 2,
     date: "23/02/2023",
     start: "21h00",

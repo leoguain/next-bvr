@@ -21,7 +21,7 @@ export const championships = [
         name: "Nürburgring GP",
         url: "https://www.youtube.com/watch?v=SPhsvLUOXvQ&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=3",
       },
-      { race: "3", name: "Suzuka Circuit", url: "/sem-video" },
+      { race: "3", name: "Suzuka Circuit", url: "https://www.youtube.com/watch?v=uhWltdRJ1O0&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=4" },
       { race: "4", name: "Dragon Trail Jardins", url: "/sem-video" },
       { race: "5", name: "Autopolis International", url: "/sem-video" },
       { race: "6", name: "Red Bull Ring", url: "/sem-video" },
