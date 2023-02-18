@@ -57,7 +57,7 @@ export const config: ThemeOverride = {
   components: {
     Text: {
       baseStyle: {
-        color: "gray.500",
+        color: "#fff",
       },
     },
     Heading: {

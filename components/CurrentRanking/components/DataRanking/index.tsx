@@ -17,8 +17,8 @@ export const DataRanking = ({
     rankingType === "Geral"
       ? "RANKING GERAL"
       : rankingType === "Sprint"
-      ? "2º ETAPA - SPRINT"
-      : "2º ETAPA - PRINCIPAL";
+      ? "3ª ETAPA - SPRINT"
+      : "3ª ETAPA - PRINCIPAL";
 
   const dataRanking =
     rankingType === "Geral"
@@ -36,9 +36,15 @@ export const DataRanking = ({
       />
 
       <Box gap={4} mt={2}>
-        {dataRanking.map(({ pos, driver, total }) => (
+        <Flex bg={"#c96b00"} justifyContent="center">
+          <Text align={"center"}>
+            Resultado não oficial. Lances em análise.
+          </Text>
+        </Flex>
+
+        {dataRanking.map(({ pos, driver, total, team }) => (
           <Flex key={driver} m={1} justifyContent="space-between">
-            <Flex w={8} bg={colorHead} px={2} justifyContent="center">
+            <Flex w={10} bg={colorHead} px={2} justifyContent="center">
               <Text color="#fff">{pos}</Text>
             </Flex>
 
@@ -46,7 +52,7 @@ export const DataRanking = ({
               <Text color={colorText}>{driver}</Text>
             </Flex>
 
-            <Flex w={8} bg={colorHead} px={2} justifyContent="center">
+            <Flex w={12} bg={colorHead} px={2} justifyContent="center">
               <Text color={colorText}>{total}</Text>
             </Flex>
           </Flex>

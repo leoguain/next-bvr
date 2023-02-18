@@ -38,5 +38,6 @@ export type ResultsProps = {
   pos: string;
   driver: string;
   idPsn: string;
+  team: string;
   total: number;
 };
