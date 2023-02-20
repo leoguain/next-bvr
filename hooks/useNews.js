@@ -1,5 +1,14 @@
 
 export const news = [
+  {
+    id: "14",
+    title: "Grand Valley confirmada no GT7!",
+    data: "20/02/2023",
+    texto:
+      "Há pouco saiu o teaser do GT7, confirmando a pista de Grand Valley de volta à franquia. Além da pista, podemos ver 4 carros novos, o PSVR2 e a IA Sophy. Confira:",
+    image: "",
+    url: "https://www.youtube.com/watch?v=1GrL0bklkrI",
+  },
     {
       id: "13",
       title: "Resultados da terceira etapa do JGTC 90s",
