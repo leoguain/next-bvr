@@ -26,7 +26,7 @@ const ToTopButton = () => {
       position={"fixed"}
       bottom={["20px", "60px", "60px", "80px"]}
       right={["20px", "20px", "40px", "40px"]}
-      z-zIndex="20"
+      zIndex="20"
     >
       {showTopBtn && (
         <IconContext.Provider value={{ color: lighten(0.2, "#149b49") }}>

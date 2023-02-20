@@ -8,7 +8,6 @@ export const DataRanking = ({
   rankingType,
   ranking,
 }: CurrentRankingsBoxProps) => {
-  console.log(ranking);
   const colorHead = ranking[0].colors.head;
   const colorRow = ranking[0].colors.row;
   const colorText = ranking[0].colors.txt;
@@ -27,6 +26,8 @@ export const DataRanking = ({
       ? ranking[0].sprint
       : ranking[0].principal;
 
+  //Resultado não oficial. Lances em análise.
+
   return (
     <Flex direction={"column"} align="center">
       <RankingHeader
@@ -36,10 +37,8 @@ export const DataRanking = ({
       />
 
       <Box gap={4} mt={2}>
-        <Flex bg={"#c96b00"} justifyContent="center">
-          <Text align={"center"}>
-            Resultado não oficial. Lances em análise.
-          </Text>
+        <Flex bg={"secondary.500"} justifyContent="center">
+          <Text align={"center"}>Resultado oficial 20/02/2023.</Text>
         </Flex>
 
         {dataRanking.map(({ pos, driver, total, team }) => (
