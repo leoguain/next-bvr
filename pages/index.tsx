@@ -10,6 +10,8 @@ import { PageConstructor } from "components/PageConstructor";
 import { calendar } from "../hooks/useCalendar";
 import { currentRanking } from "@/hooks/useCurrentRanking";
 
+import { news } from "../hooks/useNews";
+
 function Home({
   pageTitle,
   description,
@@ -35,8 +37,8 @@ function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const req = await fetch("http://localhost:3000/api/news");
-  const res = await req.json();
+  //const req = await fetch("http://localhost:3000/api/news");
+  //const res = await req.json();
 
   const pageTitle = "Liga BVR - Brasil Virtual Racing";
   const description = "Bem-vindo à Liga BVR.";
@@ -52,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
             {
               id: "news_01",
               type: "news",
-              texts: res.data,
+              texts: news,
             },
             {
               id: "video_01",

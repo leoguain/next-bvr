@@ -42,15 +42,15 @@ export const News = ({ type, news }: AllNewsProps) => {
             },
           }}
         >
-          {news.map((row: any) => (
+          {news.map(({ id, title, data, texto, image, url }) => (
             <NewsBox
-              key={row[0]}
-              id={row[0]}
-              title={row[1]}
-              data={row[2]}
-              texto={row[3]}
-              image={row[4]}
-              url={row[5]}
+              key={id}
+              id={id}
+              title={title}
+              data={data}
+              texto={texto}
+              image={image}
+              url={url}
             />
           ))}
         </Flex>
@@ -91,15 +91,15 @@ export const News = ({ type, news }: AllNewsProps) => {
             },
           }}
         >
-          {news.map((row: any) => (
+          {news.map(({ id, title, data, texto, image, url }) => (
             <NewsBox
-              key={row[0]}
-              id={row[0]}
-              title={row[1]}
-              data={row[2]}
-              texto={row[3]}
-              image={row[4]}
-              url={row[5]}
+              key={id}
+              id={id}
+              title={title}
+              data={data}
+              texto={texto}
+              image={image}
+              url={url}
             />
           ))}
         </Flex>
