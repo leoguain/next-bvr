@@ -26,7 +26,7 @@ export const SocialMedias = () => {
               <React.Fragment key={id}>
                 <Tooltip label={title}>
                   <Link href={href} isExternal>
-                    <Icon as={icon} boxSize={"3em"} />
+                    <Icon as={icon} boxSize={"2.5em"} />
                   </Link>
                 </Tooltip>
               </React.Fragment>

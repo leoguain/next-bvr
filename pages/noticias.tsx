@@ -9,13 +9,12 @@ import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
 import { News } from "components/News";
-import { news } from "../hooks/useNews";
 
 function Noticias({
   pageTitle,
+  title,
   description,
   news,
-  title,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
 
@@ -40,12 +39,16 @@ export const getStaticProps: GetStaticProps = async () => {
   const pageTitle = "Notícias - Brasil Virtual Racing";
   const title = "Notícias";
   const description = "Confira todas as notícias divulgadas aqui no site.";
+
+  const req = await fetch("http://localhost:3000/api/news");
+  const res = await req.json();
+
   return {
     props: {
       pageTitle,
       description,
       title,
-      news: news,
+      news: res.data,
     },
     revalidate: 60 * 60 * 24,
   };

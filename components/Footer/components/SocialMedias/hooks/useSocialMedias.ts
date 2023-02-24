@@ -5,6 +5,7 @@ import {
   FaInstagramSquare,
   FaWhatsapp,
   FaYoutube,
+  FaTwitter,
 } from "react-icons/fa";
 
 export const useSocialMedias = () => {
@@ -23,10 +24,14 @@ export const useSocialMedias = () => {
         icon: FaInstagramSquare,
       },
       {
+        id: "twitter",
+        title: "Siga-nos no Twitter.",
+        href: "https://twitter.com/LigaBVR_Oficial",
+        icon: FaTwitter,
+      },
+      {
         id: "whatsapp",
         title: "Entrar em contato por WhatsApp",
-        text: "WHATSAPP!",
-        subtext: "(11) 96618-1605",
         href: "https://chat.whatsapp.com/IzSEu4iFeq2DxmauUrfebh",
         icon: FaWhatsapp,
       },

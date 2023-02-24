@@ -16,8 +16,8 @@ export const DataRanking = ({
     rankingType === "Geral"
       ? "RANKING GERAL"
       : rankingType === "Sprint"
-      ? "3ª ETAPA - SPRINT"
-      : "3ª ETAPA - PRINCIPAL";
+      ? "4ª ETAPA - SPRINT"
+      : "4ª ETAPA - PRINCIPAL";
 
   const dataRanking =
     rankingType === "Geral"
@@ -26,7 +26,14 @@ export const DataRanking = ({
       ? ranking[0].sprint
       : ranking[0].principal;
 
-  //Resultado não oficial. Lances em análise.
+  //
+
+  /*
+  <Flex bg={"secondary.500"} justifyContent="center">
+    <Text align={"center"}>Resultado oficial 20/02/2023.</Text>
+  </Flex>
+  Resultado não oficial. Lances em análise.
+  */
 
   return (
     <Flex direction={"column"} align="center">
@@ -37,8 +44,8 @@ export const DataRanking = ({
       />
 
       <Box gap={4} mt={2}>
-        <Flex bg={"secondary.500"} justifyContent="center">
-          <Text align={"center"}>Resultado oficial 20/02/2023.</Text>
+        <Flex bg={"darkorange"} justifyContent="center">
+          <Text align={"center"}>Resultado não oficial.</Text>
         </Flex>
 
         {dataRanking.map(({ pos, driver, total, team }) => (

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bvr-data",
+  "private_key_id": "0c17de47c9633cad5fb7aa7bec6b1b8e2efafd9b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC54OetRuUx7mv/\nDX5F/VclR8I+R/MCNjxBR4ZG6B90aObETkys1MDdBVGe8RtquVRsUJ9fCHYvxvLw\nYnuE9cnNhYwmOvzyoJh0ybq8r0gAXmukheiwOy4BDTK6nHU2WPdw34mclLAQy3hO\nlfrZMyt/jxxb6yzguu0LY07iCVsKsWjSKSEj3Idgl4UzsRb1nWRSSSGV79v3kj2R\nhpD6VIIipDFZhXBozQqn61jsxWIcVbH4s8tfYDUSg2v63+MEPE6pJu3GVoNXMimh\n5301XXub7SOd27Pj4Sbn6cOn4So4kwKAEjwMfUUVM0Q+nGgvi7Xsq7vbkMNsPWyS\neACPPCVHAgMBAAECggEAA9PXQXCryIbtz18yQfOxBzH+lHS70shWHkwAPlaKS0Xb\ntqAcIRTycbqpzxmM5HozfFV+qqDMejhhCUUl4PuEr8g3thPR4Jcg/Iqo3zjGxUcs\ndUNSospdLKVebYxKN5fGZJsdxM0lAPuHmyqocy+EDkjenx/tGSWQOwNM/QePSd2L\nWhmJAa+6WoUEQyoMMBehaCvcJEwNDir6SGIRf76RFXvq9LBsRAMQ/QQjiSNQ3Tyb\n1jQasnGJ5/q1XjajhyBbgIuz/ZSKl/XMjzxEulv8gflnYQe+XyiLR8lBOS+RaNEr\nHPvAD7bk1SCyt6TKB+pJg1ro+kpuhpLrMRfBmREIDQKBgQDkt2y9IZkJ+5qlGiFD\nOvux34W3ZwjjWc+lMEesoW2rI3JRfG96qG2cVJrMQ0eOPSvgq8woNI7+2E2zF+VR\nWYpC1v3C/b0917+JQIEjqyMFhECKHaAipoznHONEK/wW3Pz958Iq1xlePY1AqC94\nkeDiuVqC0r3kK1mO1iHgpSuiawKBgQDQDUni+Itg5H2gzPWIxWJWYve2aawxMzzF\ndcLyCosOwk0DUTSCnbCHEMz7lYGfB8Omdr6uWbkmAS7sBovVVt6yNMQM2iPQc+V8\nbQEOlZHX4+cmXZbU4tu03r9b1OdVfW7DZ32uefmpL5GOSckY1jt8Gel9GT/7/e/E\nUE/sWX0XlQKBgQDE1FXwLgnWXYEotOQLR6dz3DjnLPSpM5FPR81m80W+EjM/jScj\nF++8qdLOFthtwJcSMsbvksu85cl4ZwgiijxCaWLZfCRwJEvhgnGgkJcDGF2yfuxg\n5ZQ9EM9Ey9WWl3fhyqF+3L4oLDBzhEnWKTSv6XPLQjHJOsVH92AQRBTZIQKBgQCO\ncJqmd23NX4IXRlvQUPsbk9RuofiPErpHonFejxNXfnWFkOI3jsieIEWG9XvyKjms\nTV4NNkaJm4PJek3gOQJs1a1n8y1T+RUj0+lGV+aq/VBzNt4eUFcFhP9UWvYq1J6x\nz7f/bWkdiQDJfwDcLUg6le8Cg/gHiXrPWADwGvCG5QKBgQCYJRcxHTvScfBkQQA0\nPH0VQZiu6a2gRezVXrqyX4LYwiqUaZi6z5puru1STX+zZFfASwd1ckHV3GLNb1QG\nalk8tvMjPst+GZRixvXtreUnAzx6DLQMcP6R3/Gk5MQ+ouYNY8DIHDx25IhXvYdm\nQqk1/J9k12vIqNLD6AVHXPJj6Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bvr-datareader@bvr-data.iam.gserviceaccount.com",
+  "client_id": "112117439528279790551",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bvr-datareader%40bvr-data.iam.gserviceaccount.com"
+}

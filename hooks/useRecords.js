@@ -390,6 +390,25 @@ export const records = [
     ],
   },
   {
+    idRecord: 45,
+    track: "Dragon Trail - Jardins",
+    records: [
+      {
+        championship: "JGTC 90s",
+        year: "2023",
+        platform: "Gran Turismo 7",
+        category: "GT500 90s",
+        date: "23/02/2023",
+        idDriverPole: "44",
+        driverPole: "Ednaldo Martins",
+        timePole: "1:30.768",
+        idDriverVMR: "3",
+        driverVMR: "José Eduardo Filho",
+        timeVMR: "1:30.128",
+      },
+    ],
+  },
+  {
     idRecord: 16,
     track: "Fuji Curta",
     records: [

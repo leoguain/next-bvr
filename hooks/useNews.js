@@ -59,7 +59,7 @@ export const news = [
       title: "Inscrições abertas para o JGTC 90s!",
       data: "06/01/2023",
       texto:
-        "Estão abertas as inscrições para o primeiro campeonato da Liga BVR em 2023: o  JGTC 90s! Este campeonato será composto por 8 etapas semanais. O regulamento já está online, clique abaixo e veja ele no nosso setor de Documentos",
+        "Estão abertas as inscrições para o primeiro campeonato da Liga BVR em 2023: o  JGTC 90s! Este campeonato será composto por 8 etapas semanais. O regulamento já está online, clique abaixo e veja ele no nosso setor de Documentos:",
       image: "",
       url: "https://ligabvr.com.br/documentos",
     },
@@ -70,7 +70,7 @@ export const news = [
       texto:
         "Seja bem-vindo ao novo site da Liga BVR! Aqui você acompanhará os resultados de todos os campeonatos desde a temporada 2021, incluindo estatísticas de pilotos, e os recordes de volta por categoria! Isso além de novas features que estão por vir. Teremos muitas atualizações durante o ano! Que tal começar o tour vendo os resultados de campeonatos? Clique abaixo:",
       image: "",
-      url: "https://ligabvr.com.br/campeonatos",
+      url: "/campeonatos",
     },
     {
       id: "6",
@@ -86,7 +86,7 @@ export const news = [
       title: "Atualização 1.26 chega recheada de conteúdo!",
       data: "24/11/2022",
       texto:
-        "Carros novos, pista nova, enquete cheia de prêmios, atualização do modo online! Essas são algumas das novidades da nova atualização do Gran Turismo 7. Lançada hoje, a atualização de aniversário da franquia rendeu um vídeo com muitas coisas novas. ",
+        "Carros novos, pista nova, enquete cheia de prêmios, atualização do modo online! Essas são algumas das novidades da nova atualização do Gran Turismo 7. Lançada hoje, a atualização de aniversário da franquia rendeu um vídeo com muitas coisas novas.",
       image: "",
       url: "https://www.youtube.com/watch?v=93uchaHAbWE",
     },
