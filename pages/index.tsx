@@ -11,6 +11,7 @@ import { calendar } from "../hooks/useCalendar";
 import { currentRanking } from "@/hooks/useCurrentRanking";
 
 import { news } from "../hooks/useNews";
+import getNews_GS from "../lib/news";
 
 function Home({
   pageTitle,
@@ -18,8 +19,6 @@ function Home({
   texts,
   sheetdata,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(process.env.NEXT_PUBLIC_BASE_URL);
-
   return (
     <React.Fragment>
       <Head>
@@ -37,8 +36,7 @@ function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const req = await fetch(`http://${process.env.NEXT_PUBLIC_API_URL}`);
-  const res = await req.json();
+  const data = await getNews_GS();
 
   const pageTitle = "Liga BVR - Brasil Virtual Racing";
   const description = "Bem-vindo à Liga BVR.";
@@ -54,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
             {
               id: "news_01",
               type: "news",
-              texts: res.data,
+              texts: data,
             },
             {
               id: "video_01",
