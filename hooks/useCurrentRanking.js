@@ -130,7 +130,7 @@ export const currentRanking = [
         driver: "Marcelo Mendes",
         idPsn: "KMZ_MarceloMB",
         team: "KMZ",
-        total: 25,
+        total: 29,
       },
       {
         pos: "4",

@@ -212,25 +212,6 @@ export const records = [
     ],
   },
   {
-    idRecord: 8,
-    track: "Willow Springs: Big Willow",
-    records: [
-      {
-        championship: "Multi Gr.4 $tream",
-        year: "2021",
-        platform: "Gran Turismo Sport",
-        category: "Gr.4",
-        date: "",
-        idDriverPole: "45",
-        driverPole: "João Cláudio Pessoa",
-        timePole: "1:15.794",
-        idDriverVMR: "45",
-        driverVMR: "João Cláudio Pessoa",
-        timeVMR: "1:15.979",
-      },
-    ],
-  },
-  {
     idRecord: 9,
     track: "Blue Moon Bay A",
     records: [
@@ -1126,6 +1107,25 @@ export const records = [
         idDriverVMR: "21",
         driverVMR: "Gustavo Viaro",
         timeVMR: "1:06.887",
+      },
+    ],
+  },
+  {
+    idRecord: 8,
+    track: "Willow Springs: Big Willow",
+    records: [
+      {
+        championship: "Multi Gr.4 $tream",
+        year: "2021",
+        platform: "Gran Turismo Sport",
+        category: "Gr.4",
+        date: "",
+        idDriverPole: "45",
+        driverPole: "João Cláudio Pessoa",
+        timePole: "1:15.794",
+        idDriverVMR: "45",
+        driverVMR: "João Cláudio Pessoa",
+        timeVMR: "1:15.979",
       },
     ],
   },
