@@ -18,7 +18,7 @@ function Home({
   texts,
   sheetdata,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(sheetdata);
+  console.log(process.env.NEXT_PUBLIC_BASE_URL);
 
   return (
     <React.Fragment>
@@ -37,8 +37,8 @@ function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  //const req = await fetch("http://localhost:3000/api/news");
-  //const res = await req.json();
+  const req = await fetch(`http://${process.env.NEXT_PUBLIC_API_URL}`);
+  const res = await req.json();
 
   const pageTitle = "Liga BVR - Brasil Virtual Racing";
   const description = "Bem-vindo à Liga BVR.";
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
             {
               id: "news_01",
               type: "news",
-              texts: news,
+              texts: res.data,
             },
             {
               id: "video_01",
