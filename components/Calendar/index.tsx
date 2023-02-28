@@ -46,28 +46,32 @@ export const Calendar = ({ calendar }: CalendarProps) => {
           }}
         >
           <IconContext.Provider value={{ color: "#fff" }}>
-            {calendar.map(({ id, date, start, title, text, icon }) => (
-              <Flex key={id} align="center" gap={6} px={2}>
-                <Flex direction={"column"} align="center">
-                  <Text color={"primary.500"}>{date}</Text>
-                  <Text color={"primary.500"} fontSize="sm">
-                    {start}
-                  </Text>
-                </Flex>
-                <Flex direction={"column"}>
-                  <Text color={"primary.500"}>{title}</Text>
-                  <Text color={"primary.500"} fontSize="sm">
-                    {text}
-                  </Text>
-                </Flex>
+            {calendar.map(({ id, date, start, title, text, icon, status }) => (
+              <React.Fragment key={id}>
+                <When value={status === "open"}>
+                  <Flex key={id} align="center" gap={6} px={2}>
+                    <Flex direction={"column"} align="center">
+                      <Text color={"primary.500"}>{date}</Text>
+                      <Text color={"primary.500"} fontSize="sm">
+                        {start}
+                      </Text>
+                    </Flex>
+                    <Flex direction={"column"}>
+                      <Text color={"primary.500"}>{title}</Text>
+                      <Text color={"primary.500"} fontSize="sm">
+                        {text}
+                      </Text>
+                    </Flex>
 
-                <When value={icon === "youtube"}>
-                  <FaYoutube size={"1.5em"} />
+                    <When value={icon === "youtube"}>
+                      <FaYoutube size={"1.5em"} />
+                    </When>
+                    <When value={icon === "instagram"}>
+                      <FaInstagramSquare size={"1.5em"} />
+                    </When>
+                  </Flex>
                 </When>
-                <When value={icon === "instagram"}>
-                  <FaInstagramSquare size={"1.5em"} />
-                </When>
-              </Flex>
+              </React.Fragment>
             ))}
           </IconContext.Provider>
         </Flex>

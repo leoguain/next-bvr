@@ -7,17 +7,15 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageConstructor } from "components/PageConstructor";
 
-import { calendar } from "../hooks/useCalendar";
 import { currentRanking } from "@/hooks/useCurrentRanking";
 
-import { news } from "../hooks/useNews";
-import getNews_GS from "../lib/news";
+import { getNews } from "../lib/news";
+import { getCalendar } from "../lib/calendar";
 
 function Home({
   pageTitle,
   description,
   texts,
-  sheetdata,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <React.Fragment>
@@ -36,10 +34,12 @@ function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await getNews_GS();
-
   const pageTitle = "Liga BVR - Brasil Virtual Racing";
   const description = "Bem-vindo à Liga BVR.";
+
+  const news = await getNews();
+  const calendar = await getCalendar();
+
   const texts = [
     {
       id: "columns_01",
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
             {
               id: "news_01",
               type: "news",
-              texts: data,
+              texts: news,
             },
             {
               id: "video_01",

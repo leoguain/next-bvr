@@ -6,8 +6,8 @@ export type AllNewsProps = {
 export type NewsProps = {
   id: string;
   title: string;
-  data: string;
-  texto: string;
+  date: string;
+  text: string;
   image: string;
   url: string;
 };

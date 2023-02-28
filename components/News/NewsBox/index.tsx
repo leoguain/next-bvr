@@ -3,7 +3,7 @@ import { Box, Flex, Link, Text } from "@chakra-ui/react";
 
 import { NewsProps } from "../types";
 
-export const NewsBox = ({ id, title, data, texto, url }: NewsProps) => {
+export const NewsBox = ({ id, title, date, text, url }: NewsProps) => {
   return (
     <Flex m={2} maxW="sm" direction="column" justifyContent={"center"} key={id}>
       <Flex
@@ -13,7 +13,7 @@ export const NewsBox = ({ id, title, data, texto, url }: NewsProps) => {
         maxWidth={40}
         borderTopRadius="md"
       >
-        {data}
+        {date}
       </Flex>
       <Box bg={"secondary.500"} borderBottomRadius="xl" maxWidth={80}>
         <Text
@@ -26,7 +26,7 @@ export const NewsBox = ({ id, title, data, texto, url }: NewsProps) => {
           {title}
         </Text>
         <Text bg={"#505050"} color="primary.500" p={2}>
-          {texto}
+          {text}
         </Text>
         <Link href={url} target="_blank" rel="noreferrer">
           <Text

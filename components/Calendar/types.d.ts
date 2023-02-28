@@ -9,4 +9,5 @@ export type EventProps = {
   title: string;
   text: string;
   icon: string;
+  status: string;
 };
