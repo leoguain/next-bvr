@@ -27,7 +27,7 @@ export const licenses = [
       {
         id: 3,
         name: "José Eduardo Filho",
-        idPsn: "PCR_Dudu10",
+        idPsn: "Dudu_fiel10",
       },
       {
         id: 1,

@@ -9,7 +9,6 @@ import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
 import { News } from "components/News";
-
 import { getNews } from "../lib/news";
 
 function Noticias({
@@ -51,7 +50,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title,
       news,
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60 * 60,
   };
 };
 

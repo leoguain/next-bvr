@@ -9,7 +9,7 @@ import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
 import { RecordsList } from "@/components/RecordsList";
-import { records } from "../hooks/useRecords";
+import { getRecords } from "../lib/records";
 
 function Recordes({
   pageTitle,
@@ -42,14 +42,16 @@ export const getStaticProps: GetStaticProps = async () => {
   const description =
     "Confira os recordes de pole position e VMR dos nossos campeonatos.";
 
+  const records = await getRecords();
+
   return {
     props: {
       pageTitle,
       description,
-      records: records,
+      records,
       title,
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60 * 60,
   };
 };
 

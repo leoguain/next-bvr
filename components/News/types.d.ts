@@ -4,10 +4,10 @@ export type AllNewsProps = {
 };
 
 export type NewsProps = {
-  id: string;
-  title: string;
-  date: string;
-  text: string;
-  image: string;
-  url: string;
+  id: string | undefined;
+  title: string | undefined;
+  date: string | undefined;
+  text: string | undefined;
+  image: string | undefined;
+  url: string | undefined;
 };

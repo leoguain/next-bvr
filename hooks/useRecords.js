@@ -497,7 +497,6 @@ export const records = [
       },
     ],
   },
-
   {
     idRecord: 21,
     track: "Kyoto Miyabi",

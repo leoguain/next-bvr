@@ -3,11 +3,11 @@ export type CalendarProps = {
 };
 
 export type EventProps = {
-  id: number;
-  date: string;
-  start: string;
-  title: string;
-  text: string;
-  icon: string;
-  status: string;
+  id: number | undefined;
+  date: string | undefined;
+  start: string | undefined;
+  title: string | undefined;
+  text: string | undefined;
+  icon: string | undefined;
+  status: string | undefined;
 };

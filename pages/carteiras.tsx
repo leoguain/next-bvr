@@ -11,13 +11,18 @@ import { PageTitle } from "components/PageTitle";
 import { LicensesList } from "@/components/LicensesList";
 import { licenses } from "../hooks/useLicenses";
 
+import { getLicenses } from "../lib/licenses";
+
 function Carteiras({
   pageTitle,
   description,
   licenses,
   title,
+  licenses2,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
+
+  console.log(licenses2);
 
   return (
     <React.Fragment>
@@ -42,14 +47,17 @@ export const getStaticProps: GetStaticProps = async () => {
   const description =
     "Acompanhe o nível de carteira de cada piloto na Liga BVR.";
 
+  const licenses2 = await getLicenses();
+
   return {
     props: {
       pageTitle,
       description,
       licenses: licenses,
       title,
+      licenses2,
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60 * 60,
   };
 };
 

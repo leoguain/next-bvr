@@ -13,3 +13,11 @@ export type DriverProps = {
   name: string;
   idPsn: string;
 };
+
+export type GS_LicenseProps = {
+  idLicense: string | undefined;
+  color: string | undefined;
+  id: number | undefined;
+  name: string | undefined;
+  idPsn: string | undefined;
+};

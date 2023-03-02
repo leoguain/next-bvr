@@ -1,10 +1,33 @@
 import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 
-import { RecordListProps } from "./types";
-import { RecordField } from "./components/RecordField";
+import { RecordListProps, RecordProps } from "./types";
+import { RecordBox } from "./components/RecordBox";
 
 export const RecordsList = ({ tracks }: RecordListProps) => {
+  function groupBy(list: any, keyGetter: any) {
+    const map = new Map();
+    list.forEach((item: any) => {
+      const key = keyGetter(item);
+      const collection = map.get(key);
+      if (!collection) {
+        map.set(key, [item]);
+      } else {
+        collection.push(item);
+      }
+    });
+    return map;
+  }
+
+  var tracksArray: any[] = new Array();
+  const grouped = groupBy(tracks, (track: any) => track.track);
+
+  function logMapElements(value: RecordProps, key: any) {
+    tracksArray.push({ key });
+  }
+
+  grouped.forEach(logMapElements);
+
   return (
     <Flex
       direction={"column"}
@@ -30,8 +53,8 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
         mt={12}
         gap={4}
       >
-        {tracks.map(({ idRecord, track, records }) => (
-          <Flex key={idRecord} m={2} align="center" justifyContent={"center"}>
+        {tracksArray.map((track) => (
+          <Flex key={track.key} m={2} align="center" justifyContent={"center"}>
             <Box px={2}>
               <Text
                 bg={"secondary.500"}
@@ -39,69 +62,15 @@ export const RecordsList = ({ tracks }: RecordListProps) => {
                 color="#fff"
                 fontSize={["md", "md", "md", "xl"]}
               >
-                {track}
+                {track.key}
               </Text>
-              {records.map(
-                ({
-                  championship,
-                  year,
-                  platform,
-                  category,
-                  driverPole,
-                  timePole,
-                  driverVMR,
-                  timeVMR,
-                }) => (
-                  <Flex
-                    key={championship}
-                    gap={2}
-                    align="center"
-                    borderBottom="2px"
-                    borderColor={"#fff"}
-                    direction={["column", "column", "column", "row"]}
-                    mb={[8]}
-                  >
-                    <Flex
-                      justifyContent={"center"}
-                      borderBottom={["1px", "1px", "1px", "0px"]}
-                      borderColor={["#fff", "#fff", "#fff"]}
-                      mt={[0, 0, 0, 2]}
-                      py={[2, 2, 2, 0]}
-                      align="center"
-                    >
-                      <RecordField
-                        topLabel="Categoria"
-                        title={category}
-                        bottomLabel={platform}
-                        type="box"
-                        darken
-                      />
-                      <RecordField
-                        topLabel="Campeonato"
-                        title={championship}
-                        bottomLabel={year}
-                        type="box"
-                      />
-                    </Flex>
 
-                    <Flex direction={"column"}>
-                      <RecordField
-                        topLabel="Pole Position"
-                        title={driverPole}
-                        bottomLabel={timePole}
-                        type="row"
-                        darken
-                      />
-                      <RecordField
-                        topLabel="VMR"
-                        title={driverVMR}
-                        bottomLabel={timeVMR}
-                        type="row"
-                      />
-                    </Flex>
-                  </Flex>
-                )
-              )}
+              {grouped.get(track.key).map((row: any) => (
+                <RecordBox
+                  key={row.records[0].championship}
+                  record={row.records[0]}
+                />
+              ))}
             </Box>
           </Flex>
         ))}
