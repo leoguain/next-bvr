@@ -22,8 +22,6 @@ function Carteiras({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
 
-  console.log(licenses2);
-
   return (
     <React.Fragment>
       <Head>

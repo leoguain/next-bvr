@@ -13,7 +13,7 @@ export async function getLicenses() {
     const sheet = doc.sheetsByIndex[3];
 
     const rows: GS_LicenseProps[] = await sheet.getRows();
-    const allNews: LicenseProps[] = rows.map((row: any) => {
+    const driversLicenses: LicenseProps[] = rows.map((row: any) => {
       return {
         idLicense: row.idLicense || "",
         color: row.color || "",
@@ -27,7 +27,7 @@ export async function getLicenses() {
       };
     });
 
-    return allNews;
+    return driversLicenses;
   } catch (error) {
     console.log(error);
   }
