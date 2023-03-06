@@ -47,8 +47,8 @@ export const DataRanking = ({
       />
 
       <Box gap={4} mt={2}>
-        <Flex bg={"darkorange"} justifyContent="center">
-          <Text align={"center"}>Resultado não oficial.</Text>
+        <Flex bg={"secondary.500"} justifyContent="center">
+          <Text align={"center"}>Resultado oficial 06/03/2023.</Text>
         </Flex>
 
         {dataRanking.map(({ pos, driver, total, team }) => (
