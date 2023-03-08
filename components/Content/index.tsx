@@ -8,6 +8,7 @@ export const Content = ({ children, ...rest }: FlexProps) => {
     <Flex
       backgroundImage={"/bkg/bkg_02.jpg"}
       backgroundAttachment="fixed"
+      backgroundPosition={"center"}
       backgroundSize="cover"
       direction="column"
     >

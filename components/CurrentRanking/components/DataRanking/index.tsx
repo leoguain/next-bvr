@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 
 import { RankingHeader } from "../RankingHeader";
+import { StatusRanking } from "../StatusRanking";
 import { CurrentRankingsBoxProps } from "../../types";
 
 export const DataRanking = ({
@@ -16,8 +17,8 @@ export const DataRanking = ({
     rankingType === "Geral"
       ? "RANKING GERAL"
       : rankingType === "Sprint"
-      ? "5ª ETAPA - SPRINT"
-      : "5ª ETAPA - PRINCIPAL";
+      ? ranking[0].numberRace + "ª ETAPA - SPRINT"
+      : ranking[0].numberRace + "ª ETAPA - PRINCIPAL";
 
   const dataRanking =
     rankingType === "Geral"
@@ -25,18 +26,6 @@ export const DataRanking = ({
       : rankingType === "Sprint"
       ? ranking[0].sprint
       : ranking[0].principal;
-
-  //
-
-  /*
-  <Flex bg={"darkorange"} justifyContent="center">
-          <Text align={"center"}>Resultado não oficial.</Text>
-        </Flex>
-  <Flex bg={"secondary.500"} justifyContent="center">
-    <Text align={"center"}>Resultado oficial 20/02/2023.</Text>
-  </Flex>
-  Resultado não oficial. Lances em análise.
-  */
 
   return (
     <Flex direction={"column"} align="center">
@@ -47,11 +36,9 @@ export const DataRanking = ({
       />
 
       <Box gap={4} mt={2}>
-        <Flex bg={"secondary.500"} justifyContent="center">
-          <Text align={"center"}>Resultado oficial 06/03/2023.</Text>
-        </Flex>
+        <StatusRanking status={ranking[0].status} date={ranking[0].date} />
 
-        {dataRanking.map(({ pos, driver, total, team }) => (
+        {dataRanking.map(({ pos, driver, total }) => (
           <Flex key={driver} m={1} justifyContent="space-between">
             <Flex w={10} bg={colorHead} px={2} justifyContent="center">
               <Text color="#fff">{pos}</Text>

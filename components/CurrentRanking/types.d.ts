@@ -13,6 +13,11 @@ export type RankingHeaderProps = {
   typeRace: string;
 };
 
+export type StatusRankingProps = {
+  status: string;
+  date: string;
+};
+
 export type RankingProps = {
   championship: string;
   year: string;
@@ -21,6 +26,9 @@ export type RankingProps = {
   geral: ResultsProps[];
   principal: ResultsProps[];
   sprint: ResultsProps[];
+  status: string;
+  date: string;
+  numberRace: string;
 };
 
 export type ChampColorsProps = {
@@ -40,4 +48,18 @@ export type ResultsProps = {
   idPsn: string;
   team: string;
   total: number;
+};
+
+export type GS_CRProps = {
+  pos: number | undefined;
+  driver: string | undefined;
+  id: string | undefined;
+  penalTotal: number | undefined;
+  totalPoints: number | undefined;
+  posMain: number | string | undefined;
+  penalMain: string | undefined;
+  pointsMain: number | undefined;
+  posSprint: number | string | undefined;
+  penalSprint: string | undefined;
+  pointsSprint: number | undefined;
 };

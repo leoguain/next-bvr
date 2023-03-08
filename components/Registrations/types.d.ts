@@ -3,13 +3,15 @@ export type RegistrationsProps = {
 };
 
 export type RegistrationProps = {
-  id: number;
-  championship: string;
-  date: string;
-  time: string;
-  rounds: string;
-  game: string;
-  platform: string;
-  logo: string;
-  statute: string;
+  id: number | undefined;
+  championship: string | undefined;
+  date: string | undefined;
+  time: string | undefined;
+  rounds: string | undefined;
+  game: string | undefined;
+  platform: string | undefined;
+  logo: string | undefined;
+  statute: string | undefined;
+  urlRegistration: string | undefined;
+  urlWhatsApp: string | undefined;
 };

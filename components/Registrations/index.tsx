@@ -1,9 +1,10 @@
 import React from "react";
-import { Flex, Box, Text, Image, Link, Button } from "@chakra-ui/react";
-import { FaFilePdf } from "react-icons/fa";
-import { IconContext } from "react-icons";
+import { Flex, Text } from "@chakra-ui/react";
 
 import { RegistrationsProps } from "./types";
+import { EventBox } from "./components/EventBox";
+
+import { When } from "../../components/shared/When";
 
 export const Registrations = ({ registrations }: RegistrationsProps) => {
   return (
@@ -33,102 +34,20 @@ export const Registrations = ({ registrations }: RegistrationsProps) => {
         mt={12}
         gap={4}
       >
-        <Text color={"#fff"} fontSize="xl">
-          Não há nenhum campeonato disponível para inscrição no momento :(
-        </Text>
-        <Text color={"#fff"} fontSize="lg">
-          Mas continue ligado com a gente para saber quando começam os próximos
-          campeonatos!
-        </Text>
+        {registrations.map((registration) => (
+          <EventBox key={registration.id} {...registration} />
+        ))}
+
+        <When value={!registrations}>
+          <Text color={"#fff"} fontSize="xl">
+            Não há nenhum campeonato disponível para inscrição no momento :(
+          </Text>
+          <Text color={"#fff"} fontSize="lg">
+            Mas continue ligado com a gente para saber quando começam os
+            próximos campeonatos!
+          </Text>
+        </When>
       </Flex>
     </Flex>
   );
 };
-
-/*
-
-{registrations.map(
-          ({
-            id,
-            championship,
-            date,
-            time,
-            rounds,
-            game,
-            platform,
-            logo,
-            statute,
-          }) => (
-            <Flex key={id} m={1} align="center" direction={"column"}>
-              <Flex
-                bg={"rgba(18, 18, 18, 0.7)"}
-                key={id}
-                m={1}
-                align="center"
-                gap={8}
-                p={4}
-              >
-                <Image alt="logo do campeonato" src={logo} width="75px" />
-                <Flex px={2} gap={4}>
-                  <Flex direction={"column"}>
-                    <Text
-                      color="#fff"
-                      fontWeight={"semibold"}
-                      fontSize={["sm", "sm", "sm", "md"]}
-                    >
-                      {championship}
-                    </Text>
-                    <Text color="#fff">{game}</Text>
-                    <Text color="#fff">{platform}</Text>
-                  </Flex>
-                </Flex>
-                <Flex direction={"column"} align="flex-start">
-                  <Text color="#fff" fontSize={["sm"]}>
-                    Início: {date}
-                  </Text>
-                  <Text color="#fff" fontSize={["sm"]}>
-                    Horário: {time}
-                  </Text>
-                  <Text color="#fff" fontSize={["sm"]}>
-                    {rounds} etapas
-                  </Text>
-                </Flex>
-                <Flex direction={"column"} align="center" gap={2}>
-                  <Text color="#fff" fontSize={["sm"]}>
-                    Regulamento:
-                  </Text>
-                  <Link
-                    textDecoration={"none"}
-                    href={statute}
-                    _hover={{ textDecoration: "none" }}
-                    isExternal
-                  >
-                    <IconContext.Provider
-                      value={{ color: "#fff", size: "2em" }}
-                    >
-                      <FaFilePdf />
-                    </IconContext.Provider>
-                  </Link>
-                </Flex>
-                <Flex direction={"column"} align="center" gap={2}>
-                  <Link
-                    textDecoration={"none"}
-                    href={statute}
-                    _hover={{ textDecoration: "none" }}
-                    isExternal
-                  >
-                    <Button
-                      bg={"secondary.500"}
-                      color="#fff"
-                      _hover={{ bg: "#fff", color: "secondary.500" }}
-                    >
-                      Inscreva-se aqui
-                    </Button>
-                  </Link>
-                </Flex>
-              </Flex>
-            </Flex>
-          )
-        )}
-
-        */

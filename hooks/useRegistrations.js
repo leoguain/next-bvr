@@ -2,13 +2,15 @@
 export const registrations = [
   {
     id: 1,
-    championship: "Impreza Vs Lancer",
-    date: "06/04/2023",
+    championship: "Desafio de Duplas Mitsubaru",
+    date: "30/03/2023",
     time: "21h00",
     rounds: "8",
     game: "Gran Turismo 7",
-    platform: "ps4 / ps5",
-    logo: "/cupLogos/JGTClogo.png",
-    statute: "https://drive.google.com/file/d/1f_n2rtPE-QxvDbeuK2NhCqqBKL4pClLB/view?usp=sharing"
+    platform: "PS4 / PS5",
+    logo: "/cupLogos/logoMitsubaru2023.png",
+    statute: "https://drive.google.com/file/d/1RIo4R2Qgsj-uNltRuLWZss_LVLZL3GaZ/view?usp=share_link",
+    urlRegistration:"https://pt.surveymonkey.com/r/HGGZV3Z",
+    urlWhatsApp:"https://chat.whatsapp.com/EZM0AlcqEveJ1ISFrVBSOh",
   },
 ];

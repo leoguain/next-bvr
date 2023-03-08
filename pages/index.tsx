@@ -7,10 +7,9 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageConstructor } from "components/PageConstructor";
 
-import { currentRanking } from "@/hooks/useCurrentRanking";
-
 import { getNews } from "../lib/news";
 import { getCalendar } from "../lib/calendar";
+import { getCurrentRanking } from "../lib/currentRanking";
 
 function Home({
   pageTitle,
@@ -39,6 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const news = await getNews();
   const calendar = await getCalendar();
+  const currentRanking = await getCurrentRanking();
 
   const texts = [
     {
@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps = async () => {
             },
             {
               id: "cardBvg_01",
-              type: "cardBvg",
+              type: "cardInscricao",
               text: "",
             },
           ],

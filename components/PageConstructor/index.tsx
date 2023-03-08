@@ -19,6 +19,7 @@ import { CurrentRanking } from "../CurrentRanking";
 import { Calendar } from "../Calendar";
 
 import { CardBvg } from "../CardBvg";
+import { CardInscricao } from "../CardInscricao";
 
 export const PageConstructor = ({ text }: TextsProps) => {
   return (
@@ -113,6 +114,10 @@ export const PageConstructor = ({ text }: TextsProps) => {
 
           <When value={type === "cardBvg"}>
             <CardBvg />
+          </When>
+
+          <When value={type === "cardInscricao"}>
+            <CardInscricao />
           </When>
 
           <When value={type === "columns"}>

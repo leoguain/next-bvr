@@ -8,6 +8,13 @@ export const documents = [
     url: "https://drive.google.com/file/d/1mpBPqT022kLSk1nTewAZ6Yaz047VfW0W/view?usp=sharing",
   },
   {
+    idDoc: 14,
+    title: "Desafio de Duplas Mitsubaru - 2023",
+    type: "Regulamento",
+    logo: "/cupLogos/logoMitsubaru2023.png",
+    url: "https://drive.google.com/file/d/1RIo4R2Qgsj-uNltRuLWZss_LVLZL3GaZ/view?usp=share_link",
+  },
+  {
     idDoc: 13,
     title: "JGTC 90s - 2023",
     type: "Regulamento",
