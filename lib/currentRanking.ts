@@ -17,7 +17,7 @@ export async function getCurrentRanking() {
     const rowsRace = await sheetRace.getRows();
     const rowsGeral = await sheetGeral.getRows();
 
-    //const statusRace = rowsRace[1].status || "";
+    const statusRace = rowsRace[1].status || "";
 
     var orderPrincipal = [...rowsRace];
     orderPrincipal.sort((a, b) => a.posMain - b.posMain);
