@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "https://www.googleapis.com/youtube/v3/playlistItems";
 
   const res = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&maxResults=6&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&maxResults=10&key=${process.env.YOUTUBE_API_KEY}`
   );
   const data = await res.json();
 

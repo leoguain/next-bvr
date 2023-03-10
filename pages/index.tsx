@@ -15,7 +15,9 @@ function Home({
   pageTitle,
   description,
   texts,
+  currentRanking,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(currentRanking);
   return (
     <React.Fragment>
       <Head>
@@ -58,7 +60,7 @@ export const getStaticProps: GetStaticProps = async () => {
               id: "video_01",
               type: "video",
               text: "Última etapa JGTC",
-              path: "https://www.youtube.com/embed/dXbGyCNAI90",
+              path: "https://www.youtube.com/embed/pc6qS2SPvJQ",
             },
           ],
         },
@@ -99,6 +101,7 @@ export const getStaticProps: GetStaticProps = async () => {
       pageTitle,
       description,
       texts,
+      currentRanking,
     },
     revalidate: 60 * 60,
   };

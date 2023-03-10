@@ -14,10 +14,10 @@ export async function getCurrentRanking() {
     const sheetRace = doc.sheetsByIndex[5];
     const sheetGeral = doc.sheetsByIndex[6];
 
-    //const statusRace = await sheetRace.getRange("O2").getValue();
-
     const rowsRace = await sheetRace.getRows();
     const rowsGeral = await sheetGeral.getRows();
+
+    //const statusRace = rowsRace[1].status || "";
 
     var orderPrincipal = [...rowsRace];
     orderPrincipal.sort((a, b) => a.posMain - b.posMain);
@@ -69,9 +69,9 @@ export async function getCurrentRanking() {
         geral: geral,
         principal: principal,
         sprint: sprint,
-        status: "ok",
-        date: "06/03/2023",
-        numberRace: "5",
+        status: "p",
+        date: "13/03/2023",
+        numberRace: "6",
       },
     ];
 
