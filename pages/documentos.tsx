@@ -9,7 +9,7 @@ import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
 
 import { DocumentsList } from "@/components/DocumentsList";
-import { documents } from "../hooks/useDocuments";
+import { getDocuments } from "../lib/documents";
 
 function Documentos({
   pageTitle,
@@ -42,12 +42,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const description =
     "Acesse o estatuto e todos os regulamentos da Liga BVR, desde a temporada 2021.";
 
+  const documents = await getDocuments();
+
   return {
     props: {
       pageTitle,
       description,
       title,
-      documents: documents,
+      documents,
     },
     revalidate: 60 * 60 * 24,
   };

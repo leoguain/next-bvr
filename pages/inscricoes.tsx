@@ -9,7 +9,7 @@ import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
 
 import { Registrations } from "@/components/Registrations";
-import { registrations } from "../hooks/useRegistrations";
+import { getRegistrations } from "../lib/registrations";
 
 function Inscricoes({
   pageTitle,
@@ -42,12 +42,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const description =
     "Veja os campeonatos disponíveis para inscrição na Liga BVR.";
 
+  const registrations = await getRegistrations();
+
   return {
     props: {
       pageTitle,
       description,
       title,
-      registrations: registrations,
+      registrations,
     },
     revalidate: 60 * 60,
   };

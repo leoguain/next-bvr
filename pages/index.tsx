@@ -15,9 +15,7 @@ function Home({
   pageTitle,
   description,
   texts,
-  currentRanking,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(currentRanking);
   return (
     <React.Fragment>
       <Head>
@@ -101,7 +99,6 @@ export const getStaticProps: GetStaticProps = async () => {
       pageTitle,
       description,
       texts,
-      currentRanking,
     },
     revalidate: 60 * 60,
   };

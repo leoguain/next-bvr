@@ -3,9 +3,9 @@ export type DocumentsProps = {
 };
 
 export type DocumentProps = {
-  idDoc: number;
-  title: string;
-  type: string;
-  logo: string;
-  url: string;
+  idDoc: number | undefined;
+  title: string | undefined;
+  type: string | undefined;
+  logo: string | undefined;
+  url: string | undefined;
 };

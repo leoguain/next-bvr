@@ -4,7 +4,7 @@ const doc = new GoogleSpreadsheet(
   "1HlxiNHOn4As6Qrdy_EkYEsbNdAxa-Fy9KspHEuk6QUw"
 );
 
-import { RankingProps } from "@/components/CurrentRanking/types";
+import { RankingProps, GS_CRProps } from "@/components/CurrentRanking/types";
 
 export async function getCurrentRanking() {
   try {
@@ -14,13 +14,13 @@ export async function getCurrentRanking() {
     const sheetRace = doc.sheetsByIndex[5];
     const sheetGeral = doc.sheetsByIndex[6];
 
-    const rowsRace = await sheetRace.getRows();
+    const rowsRace: GS_CRProps[] = await sheetRace.getRows();
     const rowsGeral = await sheetGeral.getRows();
 
-    const statusRace = rowsRace[1].status || "";
+    //const statusRace = rowsRace[1].status || "";
 
     var orderPrincipal = [...rowsRace];
-    orderPrincipal.sort((a, b) => a.posMain - b.posMain);
+    orderPrincipal.sort((a: any, b: any) => a.posMain - b.posMain);
 
     const principal = orderPrincipal.map((row: any) => {
       return {
@@ -33,7 +33,7 @@ export async function getCurrentRanking() {
     });
 
     var orderSprint = [...rowsRace];
-    orderSprint.sort((a, b) => a.posSprint - b.posSprint);
+    orderSprint.sort((a: any, b: any) => a.posSprint - b.posSprint);
 
     const sprint = orderSprint.map((row: any) => {
       return {
@@ -69,7 +69,7 @@ export async function getCurrentRanking() {
         geral: geral,
         principal: principal,
         sprint: sprint,
-        status: "p",
+        status: "ok",
         date: "13/03/2023",
         numberRace: "6",
       },
