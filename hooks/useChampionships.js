@@ -69,9 +69,9 @@ export const championships = [
         pos: "3",
         driver: "Marcelo Mendes",
         idPsn: "KMZ_MarceloMB",
-        penal: "28",
+        penal: "24",
         discard: "0",
-        total: "190",
+        total: "194",
         points: [
           { et: "1", pt: "29" },
           { et: "2", pt: "31" },
@@ -105,9 +105,9 @@ export const championships = [
         pos: "5",
         driver: "Luan Muniz",
         idPsn: "KMZ_Luan_Muniz89",
-        penal: "0",
+        penal: "4",
         discard: "0",
-        total: "181",
+        total: "177",
         points: [
           { et: "1", pt: "43" },
           { et: "2", pt: "22" },
