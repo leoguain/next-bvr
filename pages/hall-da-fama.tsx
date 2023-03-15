@@ -9,7 +9,7 @@ import { Content } from "components/Content";
 import { PageTitle } from "@/components/PageTitle";
 
 import { ChampionsList } from "@/components/ChampionsList";
-import { champions } from "../hooks/useChampions";
+import { getChampions } from "../lib/champions";
 
 function Documentos({
   pageTitle,
@@ -41,14 +41,16 @@ export const getStaticProps: GetStaticProps = async () => {
   const title = "Hall da Fama";
   const description = "Bem-vindo à Liga BVR.";
 
+  const champions = await getChampions();
+
   return {
     props: {
       pageTitle,
       description,
       title,
-      champions: champions,
+      champions,
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60 * 60,
   };
 };
 

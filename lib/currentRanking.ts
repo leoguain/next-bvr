@@ -28,6 +28,7 @@ export async function getCurrentRanking() {
         driver: row.driver || "",
         idPsn: row.id || "",
         team: "",
+        penal: row.penalMain || 0,
         total: row.pointsMain || "",
       };
     });
@@ -41,6 +42,7 @@ export async function getCurrentRanking() {
         driver: row.driver || "",
         idPsn: row.id || "",
         team: "",
+        penal: row.penalSprint || 0,
         total: row.pointsSprint || "",
       };
     });
@@ -51,6 +53,7 @@ export async function getCurrentRanking() {
         driver: row.driver || "",
         idPsn: row.id || "",
         team: "",
+        penal: 0,
         total: row.total || "",
       };
     });

@@ -47,6 +47,7 @@ export type ResultsProps = {
   driver: string;
   idPsn: string;
   team: string;
+  penal: number;
   total: number;
 };
 

@@ -5,6 +5,8 @@ import { RankingHeader } from "../RankingHeader";
 import { StatusRanking } from "../StatusRanking";
 import { CurrentRankingsBoxProps } from "../../types";
 
+import { When } from "../../../../components/shared/When";
+
 export const DataRanking = ({
   rankingType,
   ranking,
@@ -38,14 +40,22 @@ export const DataRanking = ({
       <Box gap={4} mt={2}>
         <StatusRanking status={ranking[0].status} date={ranking[0].date} />
 
-        {dataRanking.map(({ pos, driver, total }) => (
+        {dataRanking.map(({ pos, driver, penal, total }) => (
           <Flex key={driver} m={1} justifyContent="space-between">
             <Flex w={10} bg={colorHead} px={2} justifyContent="center">
               <Text color="#fff">{pos}</Text>
             </Flex>
 
-            <Flex w={56} bg={colorRow} px={2} justifyContent="start">
+            <Flex w={56} bg={colorRow} px={2} justifyContent="space-between">
               <Text color={colorText}>{driver}</Text>
+
+              <When value={penal > 0}>
+                <Flex w={12} bg="#000" px={2} justifyContent="center">
+                  <Text color="red" fontWeight={"bold"}>
+                    -{penal}
+                  </Text>
+                </Flex>
+              </When>
             </Flex>
 
             <Flex w={12} bg={colorHead} px={2} justifyContent="center">
