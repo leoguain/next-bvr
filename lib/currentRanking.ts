@@ -72,7 +72,7 @@ export async function getCurrentRanking() {
         geral: geral,
         principal: principal,
         sprint: sprint,
-        status: "ok",
+        status: "o",
         date: "16/03/2023",
         numberRace: "7",
       },
