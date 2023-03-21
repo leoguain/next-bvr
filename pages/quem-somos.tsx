@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async () => {
     {
       id: "paragraph_04",
       type: "paragraph",
-      text: "O foco no aprendizado e no aumento de qualidade sempre serão primordias. Cada evento possui um desafio, um algo a mais que tire os pilotos da zona de conforto. Isso, somado à troca de experiência dos envolvidos, sempre colabora no aumento de nível de todos os pilotos como um todo. Aqueles que entendem isso, e estão dispostos a se superar, serão sempre bem-vindos.",
+      text: "O foco no aprendizado e no aumento de qualidade sempre serão primordiais. Cada evento possui um desafio, um algo a mais que tire os pilotos da zona de conforto. Isso, somado à troca de experiência dos envolvidos, sempre colabora no aumento de nível de todos os pilotos como um todo. Aqueles que entendem isso, e estão dispostos a se superar, serão sempre bem-vindos.",
     },
   ];
 
