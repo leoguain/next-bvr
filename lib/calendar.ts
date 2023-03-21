@@ -10,7 +10,7 @@ export async function getCalendar() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[1];
+    const sheet = doc.sheetsByTitle["schedule"];
 
     const rows: EventProps[] = await sheet.getRows();
     const schedule: EventProps[] = rows.map((row: any) => {

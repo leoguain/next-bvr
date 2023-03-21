@@ -10,7 +10,7 @@ export async function getNews() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
+    const sheet = doc.sheetsByTitle["news"];
 
     const rows: NewsProps[] = await sheet.getRows();
     const allNews: NewsProps[] = rows.map((row: any) => {

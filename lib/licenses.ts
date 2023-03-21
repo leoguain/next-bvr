@@ -10,7 +10,7 @@ export async function getLicenses() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[3];
+    const sheet = doc.sheetsByTitle["licenses"];
 
     const rows: GS_LicenseProps[] = await sheet.getRows();
     const driversLicenses: LicenseProps[] = rows.map((row: any) => {

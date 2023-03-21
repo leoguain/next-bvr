@@ -10,7 +10,7 @@ export async function getChampions() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[8];
+    const sheet = doc.sheetsByTitle["champions"];
 
     const rows: ChampionProps[] = await sheet.getRows();
     const allChampions: ChampionProps[] = rows.map((row: any) => {

@@ -1,11 +1,17 @@
 import React from "react";
-import { Flex, Box, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 
 import { ChampionsProps } from "./types";
 
 export const ChampionsList = ({ champions }: ChampionsProps) => {
   return (
-    <Box bg={"rgba(18, 18, 18, 0.7)"} gap={4} mt={2} p={8}>
+    <Flex
+      direction={"column"}
+      bg={"rgba(18, 18, 18, 0.7)"}
+      gap={4}
+      mt={2}
+      p={8}
+    >
       <Text
         align={"center"}
         color={"primary.500"}
@@ -36,6 +42,6 @@ export const ChampionsList = ({ champions }: ChampionsProps) => {
           </Flex>
         ))}
       </Flex>
-    </Box>
+    </Flex>
   );
 };

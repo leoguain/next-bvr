@@ -10,7 +10,7 @@ export async function getRegistrations() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[7];
+    const sheet = doc.sheetsByTitle["inscricoes"];
 
     const rows: RegistrationProps[] = await sheet.getRows();
     const allRegistrations: RegistrationProps[] = rows.map((row: any) => {

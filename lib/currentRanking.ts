@@ -11,13 +11,12 @@ export async function getCurrentRanking() {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
 
-    const sheetRace = doc.sheetsByIndex[5];
-    const sheetGeral = doc.sheetsByIndex[6];
+    const sheetRace = doc.sheetsByTitle["lastRace"];
+    const sheetGeral = doc.sheetsByTitle["currentRanking"];
+    const sheetInfo = doc.sheetsByTitle["currentInfo"];
 
     const rowsRace: GS_CRProps[] = await sheetRace.getRows();
     const rowsGeral = await sheetGeral.getRows();
-
-    //const statusRace = rowsRace[1].status || "";
 
     var orderPrincipal = [...rowsRace];
     orderPrincipal.sort((a: any, b: any) => a.posMain - b.posMain);
@@ -58,23 +57,25 @@ export async function getCurrentRanking() {
       };
     });
 
+    await sheetInfo.loadCells("A1:B11");
+
     const cRanking: RankingProps[] = [
       {
-        championship: "JGTC 90s 2023",
-        year: "2023",
-        logo: "/cupLogos/JGTClogo.png",
+        championship: sheetInfo.getCellByA1("B1").value || "",
+        year: sheetInfo.getCellByA1("B2").value || "",
+        logo: sheetInfo.getCellByA1("B3").value || "",
         colors: {
-          bkg: "#000",
-          head: "#bc0202",
-          row: "#5b5b5b",
-          txt: "white",
+          bkg: sheetInfo.getCellByA1("B4").value || "",
+          head: sheetInfo.getCellByA1("B5").value || "",
+          row: sheetInfo.getCellByA1("B6").value || "",
+          txt: sheetInfo.getCellByA1("B7").value || "",
         },
         geral: geral,
         principal: principal,
         sprint: sprint,
-        status: "ok",
-        date: "16/03/2023",
-        numberRace: "7",
+        status: sheetInfo.getCellByA1("B10").value || "",
+        date: sheetInfo.getCellByA1("B9").value || "",
+        numberRace: sheetInfo.getCellByA1("B8").value || "",
       },
     ];
 

@@ -48,6 +48,11 @@ export const useHeader = () => {
         ],
       },
       {
+        id: "Quem somos",
+        href: "/quem-somos",
+        subItems: [],
+      },
+      {
         id: "Recordes",
         href: "/recordes",
         subItems: [],

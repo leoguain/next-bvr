@@ -13,9 +13,9 @@ import { getNews } from "../lib/news";
 
 function Noticias({
   pageTitle,
+  title,
   description,
   news,
-  title,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
 

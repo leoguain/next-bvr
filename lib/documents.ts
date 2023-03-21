@@ -10,7 +10,7 @@ export async function getDocuments() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[4];
+    const sheet = doc.sheetsByTitle["documents"];
 
     const rows: DocumentProps[] = await sheet.getRows();
     const allDocs: DocumentProps[] = rows.map((row: any) => {

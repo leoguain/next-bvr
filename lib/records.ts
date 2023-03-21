@@ -10,7 +10,7 @@ export async function getRecords() {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[2];
+    const sheet = doc.sheetsByTitle["records"];
 
     const rows: GS_Props[] = await sheet.getRows();
     const allRecords: TrackProps[] = rows.map((row: any) => {

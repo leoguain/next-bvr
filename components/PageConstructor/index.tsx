@@ -49,20 +49,20 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "noteC"}>
-            <Text color={"#000"} fontSize={["sm"]} textAlign="center" my={4}>
+            <Text color={"#fff"} fontSize={["sm"]} textAlign="center" my={4}>
               {text}
             </Text>
           </When>
 
           <When value={type === "paragraph"}>
-            <Text color={"#000"} fontSize={["md"]} textAlign="justify" my={4}>
+            <Text color={"#fff"} fontSize={["md"]} textAlign="justify" my={4}>
               {text}
             </Text>
           </When>
 
           <When value={type === "paragraphN"}>
             <Text
-              color={"#000"}
+              color={"#fff"}
               fontSize={["md"]}
               fontWeight="bold"
               textAlign="justify"
@@ -73,19 +73,19 @@ export const PageConstructor = ({ text }: TextsProps) => {
           </When>
 
           <When value={type === "subtitle"}>
-            <Text color={"primary.500"} fontSize={["xl", "2xl"]} mb={2} mt={4}>
+            <Text color={"#fff"} fontSize={["xl", "2xl"]} mb={2} mt={4}>
               {text}
             </Text>
           </When>
 
           <When value={type === "subtitle2"}>
-            <Text color={"primary.500"} fontSize={["xl"]} mb={2}>
+            <Text color={"#fff"} fontSize={["xl"]} mb={2}>
               {text}
             </Text>
           </When>
 
           <When value={type === "title"}>
-            <Text color={"primary.500"} fontSize={["2l", "3xl"]} my={4} mt={8}>
+            <Text color={"#fff"} fontSize={["2l", "3xl"]} my={4} mt={8}>
               {text}
             </Text>
           </When>
