@@ -26,7 +26,7 @@ export const championships = [
       { race: "5", name: "Autopolis International", url: "https://www.youtube.com/watch?v=dXbGyCNAI90&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=6" },
       { race: "6", name: "Red Bull Ring", url: "https://www.youtube.com/watch?v=pc6qS2SPvJQ&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=7" },
       { race: "7", name: "Tokyo Exp. East", url: "https://www.youtube.com/watch?v=gcsc0IVkznk&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=8" },
-      { race: "8", name: "Spa", url: "/sem-video" },
+      { race: "8", name: "Spa", url: "https://www.youtube.com/watch?v=uGB3YJlSkFo&list=PLSwFu7MJQiVewPBXY1h6Q9q5qe7LeE5JR&index=9" },
     ],
     results: [
       {
