@@ -2,9 +2,26 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { darken, lighten } from "polished";
 
-import { LicenseListProps } from "./types";
+import { LicenseListProps, LicenseProps } from "./types";
 
-export const LicensesList = ({ licenses }: LicenseListProps) => {
+export const LicensesList_GSData = ({ licenses }: LicenseListProps) => {
+  let cSS = licenses.filter((license) => {
+    return license.idLicense === "SS";
+  });
+  let cS = licenses.filter((license) => {
+    return license.idLicense === "S";
+  });
+  let cA = licenses.filter((license) => {
+    return license.idLicense === "A";
+  });
+  let cB = licenses.filter((license) => {
+    return license.idLicense === "B";
+  });
+
+  const ArrayCarteiras = [cSS, cS, cA, cB];
+
+  console.log(ArrayCarteiras);
+
   return (
     <Flex
       direction={"column"}
@@ -39,11 +56,11 @@ export const LicensesList = ({ licenses }: LicenseListProps) => {
         mt={12}
         gap={4}
       >
-        {licenses.map(({ idLicense, color, drivers }) => (
+        {ArrayCarteiras.map((license, index) => (
           <Flex
-            key={idLicense}
+            key={index}
             border="4px"
-            borderColor={color}
+            borderColor={license[0]?.color}
             bg={"rgba(18, 18, 18, 0.5)"}
             w={"17em"}
             p={4}
@@ -51,7 +68,7 @@ export const LicensesList = ({ licenses }: LicenseListProps) => {
             maxH={"25em"}
           >
             <Text align={"center"} color="#fff" fontWeight={"semibold"}>
-              Carteira {idLicense}
+              Carteira {license[0]?.idLicense}
             </Text>
             <Flex
               direction={"column"}
@@ -65,25 +82,25 @@ export const LicensesList = ({ licenses }: LicenseListProps) => {
                   width: "10px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                  background: darken(0.2, color),
+                  background: darken(0.2, license[0]?.color),
                   borderRadius: "2px",
                 },
               }}
             >
-              {drivers.map(({ id, name, idPsn }) => (
+              {license.map((piloto: LicenseProps) => (
                 <Flex
-                  key={id}
+                  key={piloto.id}
                   justifyContent="space-between"
                   p={2}
                   borderBottom="2px"
-                  borderColor={lighten(0.4, color)}
+                  borderColor={lighten(0.4, piloto.color)}
                   direction="column"
                 >
                   <Text color="#fff" fontSize={"md"}>
-                    {name}
+                    {piloto.name}
                   </Text>
                   <Text color="#fff" fontSize={"xs"}>
-                    {idPsn}
+                    {piloto.idPsn}
                   </Text>
                 </Flex>
               ))}

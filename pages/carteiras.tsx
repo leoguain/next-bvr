@@ -8,9 +8,7 @@ import { Page } from "components/Page";
 import { Content } from "components/Content";
 import { PageTitle } from "components/PageTitle";
 
-import { LicensesList } from "@/components/LicensesList";
-import { licenses } from "../hooks/useLicenses";
-
+import { LicensesList_GSData } from "@/components/LicensesList_GSData";
 import { getLicenses } from "../lib/licenses";
 
 function Carteiras({
@@ -18,7 +16,6 @@ function Carteiras({
   description,
   licenses,
   title,
-  licenses2,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { asPath } = useRouter();
 
@@ -32,7 +29,7 @@ function Carteiras({
       <Page title={pageTitle} description={description}>
         <Content>
           <PageTitle pageTitle={title} pageUrl={asPath} />
-          <LicensesList licenses={licenses} />
+          <LicensesList_GSData licenses={licenses} />
         </Content>
       </Page>
     </React.Fragment>
@@ -45,15 +42,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const description =
     "Acompanhe o nível de carteira de cada piloto na Liga BVR.";
 
-  const licenses2 = await getLicenses();
+  const licenses = await getLicenses();
 
   return {
     props: {
       pageTitle,
       description,
-      licenses: licenses,
       title,
-      licenses2,
+      licenses,
     },
     revalidate: 60 * 60,
   };

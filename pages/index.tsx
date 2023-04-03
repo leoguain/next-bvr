@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps = async () => {
             },
             {
               id: "cardBvg_01",
-              type: "cardInscricao",
+              type: "cardBvg",
               text: "",
             },
           ],

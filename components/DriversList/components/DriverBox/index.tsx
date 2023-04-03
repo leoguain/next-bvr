@@ -36,7 +36,7 @@ export const DriverBox = ({
       _hover={{ bg: "secondary.500" }}
     >
       <Flex align={"center"} mb={2} bg={"rgba(18, 18, 18, 0.7)"}>
-        <Image alt="logo do campeonato" src={image} w="100px" />
+        <Image alt="foto do piloto" src={image} w="100px" />
         <Flex direction={"column"} px={2}>
           <Text color="#fff">{index + 1}º no Ranking</Text>
           <Text color="#fff" fontWeight={"semibold"}>

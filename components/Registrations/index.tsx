@@ -15,7 +15,19 @@ export const Registrations = ({ registrations }: RegistrationsProps) => {
       mt={2}
       p={8}
     >
-      <Text
+      <Text color={"#fff"} fontSize="xl">
+        Não há nenhum campeonato disponível para inscrição no momento :(
+      </Text>
+      <Text color={"#fff"} fontSize="lg">
+        Mas continue ligado com a gente para saber quando começam os próximos
+        campeonatos!
+      </Text>
+    </Flex>
+  );
+};
+
+/*
+<Text
         align={"center"}
         color={"primary.500"}
         fontSize={["md", "lg"]}
@@ -37,17 +49,6 @@ export const Registrations = ({ registrations }: RegistrationsProps) => {
         {registrations.map((registration) => (
           <EventBox key={registration.id} {...registration} />
         ))}
-
-        <When value={!registrations}>
-          <Text color={"#fff"} fontSize="xl">
-            Não há nenhum campeonato disponível para inscrição no momento :(
-          </Text>
-          <Text color={"#fff"} fontSize="lg">
-            Mas continue ligado com a gente para saber quando começam os
-            próximos campeonatos!
-          </Text>
-        </When>
       </Flex>
-    </Flex>
-  );
-};
+
+      */

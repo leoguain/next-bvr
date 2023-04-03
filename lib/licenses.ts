@@ -4,7 +4,7 @@ const doc = new GoogleSpreadsheet(
   "1HlxiNHOn4As6Qrdy_EkYEsbNdAxa-Fy9KspHEuk6QUw"
 );
 
-import { LicenseProps, GS_LicenseProps } from "@/components/LicensesList/types";
+import { GS_LicenseProps } from "@/components/LicensesList_GSData/types";
 
 export async function getLicenses() {
   try {
@@ -13,17 +13,13 @@ export async function getLicenses() {
     const sheet = doc.sheetsByTitle["licenses"];
 
     const rows: GS_LicenseProps[] = await sheet.getRows();
-    const driversLicenses: LicenseProps[] = rows.map((row: any) => {
+    const driversLicenses: GS_LicenseProps[] = rows.map((row: any) => {
       return {
         idLicense: row.idLicense || "",
         color: row.color || "",
-        drivers: [
-          {
-            id: row.id || "",
-            name: row.name || "",
-            idPsn: row.idPsn || "",
-          },
-        ],
+        id: row.id || "",
+        name: row.name || "",
+        idPsn: row.idPsn || "",
       };
     });
 
