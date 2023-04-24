@@ -72,8 +72,8 @@ export const getStaticProps: GetStaticProps = async () => {
               texts: calendar,
             },
             {
-              id: "cardBvg_01",
-              type: "cardBvg",
+              id: "cardInscricao_01",
+              type: "cardInscricao",
               text: "",
             },
           ],

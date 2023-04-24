@@ -5,7 +5,10 @@ export const CardInscricao = () => {
   return (
     <Flex align="center" maxW={"sm"} direction="column">
       <Link href="/inscricoes" rel="noreferrer">
-        <Image alt="logo do campeonato" src="/misc/bannerInscricao.jpg" />
+        <Image
+          alt="logo do campeonato"
+          src="/misc/bannerInscricaoTCR2023.jpg"
+        />
       </Link>
     </Flex>
   );

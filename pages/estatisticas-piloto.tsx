@@ -169,8 +169,31 @@ function EstatisticasPiloto({
       </Head>
 
       <Page title={pageTitle} description={description}>
-        <Content>
-          <Flex align={"center"} mb={2} bg={"rgba(18, 18, 18, 0.7)"}>
+        <Content></Content>
+      </Page>
+    </React.Fragment>
+  );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const pageTitle = "Estatísticas de Piloto X - Brasil Virtual Racing";
+  const title = "Estatísticas de Pilotos";
+  const description = "Todas as estatísticas do piloto desde a temporada 2021.";
+
+  return {
+    props: {
+      pageTitle,
+      description,
+      title,
+    },
+    revalidate: 60 * 60 * 24,
+  };
+};
+
+export default EstatisticasPiloto;
+
+/*
+<Flex align={"center"} mb={2} bg={"rgba(18, 18, 18, 0.7)"}>
             <Image alt="foto do piloto" src="/drivers/p_0001.png" w="100px" />
             <Flex direction={"column"} px={2}>
               <Text color="#fff">1º no Ranking</Text>
@@ -471,25 +494,5 @@ function EstatisticasPiloto({
               </Flex>
             </Flex>
           </Flex>
-        </Content>
-      </Page>
-    </React.Fragment>
-  );
-}
 
-export const getStaticProps: GetStaticProps = async () => {
-  const pageTitle = "Estatísticas de Piloto X - Brasil Virtual Racing";
-  const title = "Estatísticas de Pilotos";
-  const description = "Todas as estatísticas do piloto desde a temporada 2021.";
-
-  return {
-    props: {
-      pageTitle,
-      description,
-      title,
-    },
-    revalidate: 60 * 60 * 24,
-  };
-};
-
-export default EstatisticasPiloto;
+*/
